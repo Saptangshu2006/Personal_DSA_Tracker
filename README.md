@@ -1,3 +1,7 @@
+# 🚀 Custom DSA Mastery Tracker
+
+A self-paced, zero-distraction Data Structures & Algorithms (DSA) tracking web application. Built specifically to help prepare for **Service-Based Companies (TCS, Infosys, Cognizant, Wipro, Accenture)**, mid-tier product companies, and early-stage tech startups.
+
 ✨ Key Features
 ⏱️ No Time Limits / Fully Self-Paced: Removed the strict 60-day deadline structure. Track your progress module-by-module at your own speed.
 
