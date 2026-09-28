@@ -1,0 +1,2799 @@
+[
+  {
+    "topicId": "topic_1",
+    "title": "Setup & First Program",
+    "category": "Foundations",
+    "note": "Pick ONE language and stick to it for 60 days. Install compiler/IDE, make a LeetCode account today.",
+    "gfgUrl": "https://www.geeksforgeeks.org/cpp/c-plus-plus/",
+    "videos": [
+      {
+        "id": "v_1_1",
+        "title": "The Best Way To Learn DSA in 2025",
+        "ytId": "qH2VQY48mg4",
+        "url": "https://www.youtube.com/watch?v=qH2VQY48mg4"
+      },
+      {
+        "id": "v_1_2",
+        "title": "DSA Patterns Roadmap 2025",
+        "ytId": "S8tpzqrwnHk",
+        "url": "https://www.youtube.com/watch?v=S8tpzqrwnHk"
+      },
+      {
+        "id": "v_1_3",
+        "title": "DSA Basics Day 1 — C++ / Java / Python",
+        "ytId": "mjuMIHHbkT8",
+        "url": "https://www.youtube.com/watch?v=mjuMIHHbkT8"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_1_1",
+        "title": "Concatenation of Array",
+        "slug": "concatenation-of-array",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/concatenation-of-array/"
+      },
+      {
+        "id": "p_1_2",
+        "title": "Running Sum of 1d Array",
+        "slug": "running-sum-of-1d-array",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/running-sum-of-1d-array/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_2",
+    "title": "If-Else, Loops, Conditionals",
+    "category": "Foundations",
+    "note": "Loops are 90% of DSA. Dry-run every loop on paper before you run the code.",
+    "gfgUrl": "https://www.geeksforgeeks.org/cpp/c-plus-plus/",
+    "videos": [
+      {
+        "id": "v_2_1",
+        "title": "DSA Basics Day 2 — IF-ELSE & Loops",
+        "ytId": "1bXdrfP5vwA",
+        "url": "https://www.youtube.com/watch?v=1bXdrfP5vwA"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_2_1",
+        "title": "FizzBuzz",
+        "slug": "fizz-buzz",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/fizz-buzz/"
+      },
+      {
+        "id": "p_2_2",
+        "title": "Number of Steps to Reduce a Number to Zero",
+        "slug": "number-of-steps-to-reduce-a-number-to-zero",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/"
+      },
+      {
+        "id": "p_2_3",
+        "title": "Richest Customer Wealth",
+        "slug": "richest-customer-wealth",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/richest-customer-wealth/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_3",
+    "title": "Functions, Arrays & Linked List Intro",
+    "category": "Foundations",
+    "note": "Don't worry if Linked List feels abstract — we return to it properly on Day 17.",
+    "gfgUrl": "https://www.geeksforgeeks.org/cpp/c-plus-plus/",
+    "videos": [
+      {
+        "id": "v_3_1",
+        "title": "DSA Basics Day 3 — Functions",
+        "ytId": "pPOjiA1NEPw",
+        "url": "https://www.youtube.com/watch?v=pPOjiA1NEPw"
+      },
+      {
+        "id": "v_3_2",
+        "title": "DSA Basics Day 4 — Arrays & Linked List",
+        "ytId": "jk_A6Aue98I",
+        "url": "https://www.youtube.com/watch?v=jk_A6Aue98I"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_3_1",
+        "title": "Remove Element",
+        "slug": "remove-element",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/remove-element/"
+      },
+      {
+        "id": "p_3_2",
+        "title": "Merge Sorted Array",
+        "slug": "merge-sorted-array",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/merge-sorted-array/"
+      },
+      {
+        "id": "p_3_3",
+        "title": "Middle of the Linked List",
+        "slug": "middle-of-the-linked-list",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/middle-of-the-linked-list/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_4",
+    "title": "Time & Space Complexity",
+    "category": "Foundations",
+    "note": "THE most important day of week 1. For every problem today write both the brute-force and optimal complexity in a notebook.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/asymptotic-notation-and-analysis-based-on-input-size-of-algorithms/",
+    "videos": [
+      {
+        "id": "v_4_1",
+        "title": "Master Time Complexity in 30 Minutes",
+        "ytId": "oFwHwCkSoGw",
+        "url": "https://www.youtube.com/watch?v=oFwHwCkSoGw"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_4_1",
+        "title": "Two Sum (solve brute force first)",
+        "slug": "two-sum",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/two-sum/"
+      },
+      {
+        "id": "p_4_2",
+        "title": "Contains Duplicate",
+        "slug": "contains-duplicate",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/contains-duplicate/"
+      },
+      {
+        "id": "p_4_3",
+        "title": "Majority Element",
+        "slug": "majority-element",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/majority-element/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_5",
+    "title": "Hashmaps & Sets",
+    "category": "Arrays & Hashing",
+    "note": "Hashmap turns O(n^2) into O(n) more often than any other tool. Learn it before patterns.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/hashing-data-structure/",
+    "videos": [
+      {
+        "id": "v_5_1",
+        "title": "The Only Video You Need To Master HASHMAPS",
+        "ytId": "9a4A6CbrLCo",
+        "url": "https://www.youtube.com/watch?v=9a4A6CbrLCo"
+      },
+      {
+        "id": "v_5_2",
+        "title": "4 Questions to Master Hashmaps",
+        "ytId": "ICggOtnixBk",
+        "url": "https://www.youtube.com/watch?v=ICggOtnixBk"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_5_1",
+        "title": "Two Sum (now in O(n))",
+        "slug": "two-sum",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/two-sum/"
+      },
+      {
+        "id": "p_5_2",
+        "title": "Valid Anagram",
+        "slug": "valid-anagram",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/valid-anagram/"
+      },
+      {
+        "id": "p_5_3",
+        "title": "Group Anagrams",
+        "slug": "group-anagrams",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/group-anagrams/"
+      },
+      {
+        "id": "p_5_4",
+        "title": "Top K Frequent Elements",
+        "slug": "top-k-frequent-elements",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/top-k-frequent-elements/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_6",
+    "title": "Two Pointers — Introduction",
+    "category": "Two Pointers & Sliding Window",
+    "note": "Opposite-end pointers vs same-direction pointers — know which signal picks which.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/two-pointers-technique/",
+    "videos": [
+      {
+        "id": "v_6_1",
+        "title": "Master DSA Patterns with 2 Pointers",
+        "ytId": "Fu7LD_mIo00",
+        "url": "https://www.youtube.com/watch?v=Fu7LD_mIo00"
+      },
+      {
+        "id": "v_6_2",
+        "title": "2 Pointer Technique — Part 2",
+        "ytId": "PvyEr3CeKzE",
+        "url": "https://www.youtube.com/watch?v=PvyEr3CeKzE"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_6_1",
+        "title": "Two Sum II — Input Array Is Sorted",
+        "slug": "two-sum-ii-input-array-is-sorted",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/"
+      },
+      {
+        "id": "p_6_2",
+        "title": "Valid Palindrome",
+        "slug": "valid-palindrome",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/valid-palindrome/"
+      },
+      {
+        "id": "p_6_3",
+        "title": "Move Zeroes",
+        "slug": "move-zeroes",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/move-zeroes/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_7",
+    "title": "Two Pointers — Interview Questions",
+    "category": "Two Pointers & Sliding Window",
+    "note": "3Sum is asked in real interviews constantly. Do it twice today.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/two-pointers-technique/",
+    "videos": [
+      {
+        "id": "v_7_1",
+        "title": "2 Pointer DSA Pattern — Part 3",
+        "ytId": "nPdxCoVHC90",
+        "url": "https://www.youtube.com/watch?v=nPdxCoVHC90"
+      },
+      {
+        "id": "v_7_2",
+        "title": "Two Pointers: More Interview Questions",
+        "ytId": "rM9EthMlXnw",
+        "url": "https://www.youtube.com/watch?v=rM9EthMlXnw"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_7_1",
+        "title": "3Sum",
+        "slug": "3sum",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/3sum/"
+      },
+      {
+        "id": "p_7_2",
+        "title": "Container With Most Water",
+        "slug": "container-with-most-water",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/container-with-most-water/"
+      },
+      {
+        "id": "p_7_3",
+        "title": "Remove Duplicates from Sorted Array",
+        "slug": "remove-duplicates-from-sorted-array",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/remove-duplicates-from-sorted-array/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_8",
+    "title": "Two Pointers — Hard + Revision",
+    "category": "Two Pointers & Sliding Window",
+    "note": "Trapping Rain Water is hard — attempt for 30 min, then watch the solution. That's not cheating.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/two-pointers-technique/",
+    "videos": [
+      {
+        "id": "v_8_1",
+        "title": "Two Pointers: Most Important Questions",
+        "ytId": "ljJJcYql6Bc",
+        "url": "https://www.youtube.com/watch?v=ljJJcYql6Bc"
+      },
+      {
+        "id": "v_8_2",
+        "title": "Two Pointers: Complete Revision",
+        "ytId": "n7v0SokbF4I",
+        "url": "https://www.youtube.com/watch?v=n7v0SokbF4I"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_8_1",
+        "title": "Sort Colors",
+        "slug": "sort-colors",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/sort-colors/"
+      },
+      {
+        "id": "p_8_2",
+        "title": "4Sum",
+        "slug": "4sum",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/4sum/"
+      },
+      {
+        "id": "p_8_3",
+        "title": "Trapping Rain Water",
+        "slug": "trapping-rain-water",
+        "diff": "H",
+        "url": "https://leetcode.com/problems/trapping-rain-water/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_9",
+    "title": "Sliding Window — Fixed Size",
+    "category": "Two Pointers & Sliding Window",
+    "note": "Fixed window = window size given. Variable window = window size is the answer. Spot the difference.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/window-sliding-technique/",
+    "videos": [
+      {
+        "id": "v_9_1",
+        "title": "Introduction to Sliding Window",
+        "ytId": "V6pRTnOZ7Mc",
+        "url": "https://www.youtube.com/watch?v=V6pRTnOZ7Mc"
+      },
+      {
+        "id": "v_9_2",
+        "title": "Sliding Window: Easy & Medium Questions",
+        "ytId": "DL8LSXUsfWE",
+        "url": "https://www.youtube.com/watch?v=DL8LSXUsfWE"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_9_1",
+        "title": "Maximum Average Subarray I",
+        "slug": "maximum-average-subarray-i",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/maximum-average-subarray-i/"
+      },
+      {
+        "id": "p_9_2",
+        "title": "Best Time to Buy and Sell Stock",
+        "slug": "best-time-to-buy-and-sell-stock",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/"
+      },
+      {
+        "id": "p_9_3",
+        "title": "Longest Substring Without Repeating Characters",
+        "slug": "longest-substring-without-repeating-characters",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_10",
+    "title": "Sliding Window — Variable Size",
+    "category": "Two Pointers & Sliding Window",
+    "note": "Template: expand right, shrink left while invalid, record answer. Memorise the shape, not the code.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/window-sliding-technique/",
+    "videos": [
+      {
+        "id": "v_10_1",
+        "title": "Sliding Window: Core Interview Questions",
+        "ytId": "v4pIgiBQMh8",
+        "url": "https://www.youtube.com/watch?v=v4pIgiBQMh8"
+      },
+      {
+        "id": "v_10_2",
+        "title": "Sliding Window: Important Questions",
+        "ytId": "2HZ12B2ZPAQ",
+        "url": "https://www.youtube.com/watch?v=2HZ12B2ZPAQ"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_10_1",
+        "title": "Longest Repeating Character Replacement",
+        "slug": "longest-repeating-character-replacement",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/longest-repeating-character-replacement/"
+      },
+      {
+        "id": "p_10_2",
+        "title": "Permutation in String",
+        "slug": "permutation-in-string",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/permutation-in-string/"
+      },
+      {
+        "id": "p_10_3",
+        "title": "Max Consecutive Ones III",
+        "slug": "max-consecutive-ones-iii",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/max-consecutive-ones-iii/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_11",
+    "title": "Sliding Window — Revision",
+    "category": "Two Pointers & Sliding Window",
+    "note": "Re-solve Day 9's problems from scratch without looking. If you can't, redo Day 9.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/window-sliding-technique/",
+    "videos": [
+      {
+        "id": "v_11_1",
+        "title": "Sliding Window Revision (Part 1)",
+        "ytId": "lyZp-49pdzQ",
+        "url": "https://www.youtube.com/watch?v=lyZp-49pdzQ"
+      },
+      {
+        "id": "v_11_2",
+        "title": "Sliding Window Revision (Part 2)",
+        "ytId": "IR3oL6ltbJ8",
+        "url": "https://www.youtube.com/watch?v=IR3oL6ltbJ8"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_11_1",
+        "title": "Fruit Into Baskets",
+        "slug": "fruit-into-baskets",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/fruit-into-baskets/"
+      },
+      {
+        "id": "p_11_2",
+        "title": "Minimum Size Subarray Sum",
+        "slug": "minimum-size-subarray-sum",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/minimum-size-subarray-sum/"
+      },
+      {
+        "id": "p_11_3",
+        "title": "Subarray Product Less Than K",
+        "slug": "subarray-product-less-than-k",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/subarray-product-less-than-k/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_12",
+    "title": "Sliding Window — FAANG Level",
+    "category": "Two Pointers & Sliding Window",
+    "note": "Minimum Window Substring appears in Amazon and Google loops. Know it cold.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/window-sliding-technique/",
+    "videos": [
+      {
+        "id": "v_12_1",
+        "title": "Sliding Window: Amazon Interview Question",
+        "ytId": "9wc8HZH_sh4",
+        "url": "https://www.youtube.com/watch?v=9wc8HZH_sh4"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_12_1",
+        "title": "Minimum Window Substring",
+        "slug": "minimum-window-substring",
+        "diff": "H",
+        "url": "https://leetcode.com/problems/minimum-window-substring/"
+      },
+      {
+        "id": "p_12_2",
+        "title": "Sliding Window Maximum",
+        "slug": "sliding-window-maximum",
+        "diff": "H",
+        "url": "https://leetcode.com/problems/sliding-window-maximum/"
+      },
+      {
+        "id": "p_12_3",
+        "title": "Count Number of Nice Subarrays",
+        "slug": "count-number-of-nice-subarrays",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/count-number-of-nice-subarrays/"
+      },
+      {
+        "id": "p_12_add_next-permutation",
+        "title": "Next Permutation",
+        "slug": "next-permutation",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/next-permutation/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_13",
+    "title": "Prefix Sum — Introduction",
+    "category": "Arrays & Hashing",
+    "note": "Prefix sum + hashmap is a combo. Subarray Sum Equals K is where the two meet.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/prefix-sum-array-implementation-applications-competitive-programming/",
+    "videos": [
+      {
+        "id": "v_13_1",
+        "title": "Prefix Sum Pattern Introduction",
+        "ytId": "F86WfZ5RUC8",
+        "url": "https://www.youtube.com/watch?v=F86WfZ5RUC8"
+      },
+      {
+        "id": "v_13_2",
+        "title": "Master DSA Patterns With Prefix Sum",
+        "ytId": "XLtRoHIDGs0",
+        "url": "https://www.youtube.com/watch?v=XLtRoHIDGs0"
+      },
+      {
+        "id": "v_13_3",
+        "title": "Prefix Sum: Interview Questions",
+        "ytId": "sh0Ng7sjscE",
+        "url": "https://www.youtube.com/watch?v=sh0Ng7sjscE"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_13_1",
+        "title": "Range Sum Query — Immutable",
+        "slug": "range-sum-query-immutable",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/range-sum-query-immutable/"
+      },
+      {
+        "id": "p_13_2",
+        "title": "Find Pivot Index",
+        "slug": "find-pivot-index",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/find-pivot-index/"
+      },
+      {
+        "id": "p_13_3",
+        "title": "Subarray Sum Equals K",
+        "slug": "subarray-sum-equals-k",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/subarray-sum-equals-k/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_14",
+    "title": "Prefix Sum — Advanced",
+    "category": "Arrays & Hashing",
+    "note": "Product of Array Except Self is prefix/suffix thinking — no division allowed.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/prefix-sum-array-implementation-applications-competitive-programming/",
+    "videos": [
+      {
+        "id": "v_14_1",
+        "title": "Prefix Sum Hacks for Amazon Interviews",
+        "ytId": "EYpv5sypVdE",
+        "url": "https://www.youtube.com/watch?v=EYpv5sypVdE"
+      },
+      {
+        "id": "v_14_2",
+        "title": "Master Prefix Sum in 10 Minutes",
+        "ytId": "oZnLzJCOdPA",
+        "url": "https://www.youtube.com/watch?v=oZnLzJCOdPA"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_14_1",
+        "title": "Product of Array Except Self",
+        "slug": "product-of-array-except-self",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/product-of-array-except-self/"
+      },
+      {
+        "id": "p_14_2",
+        "title": "Contiguous Array",
+        "slug": "contiguous-array",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/contiguous-array/"
+      },
+      {
+        "id": "p_14_3",
+        "title": "Continuous Subarray Sum",
+        "slug": "continuous-subarray-sum",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/continuous-subarray-sum/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_15",
+    "title": "Kadane's Algorithm",
+    "category": "Arrays & Hashing",
+    "note": "Kadane is your first taste of DP thinking. Notice the 'carry forward or restart' decision.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/largest-sum-contiguous-subarray/",
+    "videos": [
+      {
+        "id": "v_15_1",
+        "title": "Kadane's Algorithm: Intro & Intuition",
+        "ytId": "N8vJ8RyQEes",
+        "url": "https://www.youtube.com/watch?v=N8vJ8RyQEes"
+      },
+      {
+        "id": "v_15_2",
+        "title": "Kadane's: Most Important Interview Question",
+        "ytId": "JUV-Hdtuzsw",
+        "url": "https://www.youtube.com/watch?v=JUV-Hdtuzsw"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_15_1",
+        "title": "Maximum Subarray",
+        "slug": "maximum-subarray",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/maximum-subarray/"
+      },
+      {
+        "id": "p_15_2",
+        "title": "Maximum Product Subarray",
+        "slug": "maximum-product-subarray",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/maximum-product-subarray/"
+      },
+      {
+        "id": "p_15_3",
+        "title": "Maximum Sum Circular Subarray",
+        "slug": "maximum-sum-circular-subarray",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/maximum-sum-circular-subarray/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_16",
+    "title": "Kadane — Variants",
+    "category": "Arrays & Hashing",
+    "note": "One-deletion variant = two Kadanes running together. Draw both arrays out.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/largest-sum-contiguous-subarray/",
+    "videos": [
+      {
+        "id": "v_16_1",
+        "title": "Kadane's Algorithm: Quick Revision",
+        "ytId": "Bt9rgQgGf64",
+        "url": "https://www.youtube.com/watch?v=Bt9rgQgGf64"
+      },
+      {
+        "id": "v_16_2",
+        "title": "Kadane With One Deletion",
+        "ytId": "jIz4zcFuUU8",
+        "url": "https://www.youtube.com/watch?v=jIz4zcFuUU8"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_16_1",
+        "title": "Maximum Subarray Sum with One Deletion",
+        "slug": "maximum-subarray-sum-with-one-deletion",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/maximum-subarray-sum-with-one-deletion/"
+      },
+      {
+        "id": "p_16_2",
+        "title": "Best Time to Buy and Sell Stock II",
+        "slug": "best-time-to-buy-and-sell-stock-ii",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/"
+      },
+      {
+        "id": "p_16_3",
+        "title": "K-Concatenation Maximum Sum",
+        "slug": "k-concatenation-maximum-sum",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/k-concatenation-maximum-sum/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_17",
+    "title": "Linked List — Basics & Slow/Fast",
+    "category": "Linked Lists",
+    "note": "Draw every pointer move on paper. Linked List bugs are always off-by-one pointer bugs.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/linked-list-data-structure/",
+    "videos": [
+      {
+        "id": "v_17_1",
+        "title": "Linked List Basics for Beginners",
+        "ytId": "NSh5oNElD84",
+        "url": "https://www.youtube.com/watch?v=NSh5oNElD84"
+      },
+      {
+        "id": "v_17_2",
+        "title": "Slow & Fast Pointer: Introduction",
+        "ytId": "IxxlDYwMrZ8",
+        "url": "https://www.youtube.com/watch?v=IxxlDYwMrZ8"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_17_1",
+        "title": "Middle of the Linked List",
+        "slug": "middle-of-the-linked-list",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/middle-of-the-linked-list/"
+      },
+      {
+        "id": "p_17_2",
+        "title": "Linked List Cycle",
+        "slug": "linked-list-cycle",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/linked-list-cycle/"
+      },
+      {
+        "id": "p_17_3",
+        "title": "Remove Nth Node From End of List",
+        "slug": "remove-nth-node-from-end-of-list",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/remove-nth-node-from-end-of-list/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_18",
+    "title": "Linked List — Important Questions",
+    "category": "Linked Lists",
+    "note": "Palindrome LL = find middle + reverse half + compare. Three patterns in one problem.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/linked-list-data-structure/",
+    "videos": [
+      {
+        "id": "v_18_1",
+        "title": "Slow-Fast Pointer: Important Questions",
+        "ytId": "jDP1NkjVjWQ",
+        "url": "https://www.youtube.com/watch?v=jDP1NkjVjWQ"
+      },
+      {
+        "id": "v_18_2",
+        "title": "Slow-Fast Pointer: More Questions",
+        "ytId": "RNpZBhZBtJc",
+        "url": "https://www.youtube.com/watch?v=RNpZBhZBtJc"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_18_1",
+        "title": "Palindrome Linked List",
+        "slug": "palindrome-linked-list",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/palindrome-linked-list/"
+      },
+      {
+        "id": "p_18_2",
+        "title": "Intersection of Two Linked Lists",
+        "slug": "intersection-of-two-linked-lists",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/intersection-of-two-linked-lists/"
+      },
+      {
+        "id": "p_18_3",
+        "title": "Remove Duplicates from Sorted List",
+        "slug": "remove-duplicates-from-sorted-list",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/remove-duplicates-from-sorted-list/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_19",
+    "title": "Linked List — Cycle Detection",
+    "category": "Linked Lists",
+    "note": "Find the Duplicate Number is a cycle problem in disguise — that's the interview trick.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/linked-list-data-structure/",
+    "videos": [
+      {
+        "id": "v_19_1",
+        "title": "Start of Cycle Logic Explained",
+        "ytId": "p8efFVGuqyI",
+        "url": "https://www.youtube.com/watch?v=p8efFVGuqyI"
+      },
+      {
+        "id": "v_19_2",
+        "title": "Slow-Fast Pointer: Complete Revision",
+        "ytId": "ftpI12-e3zs",
+        "url": "https://www.youtube.com/watch?v=ftpI12-e3zs"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_19_1",
+        "title": "Linked List Cycle II",
+        "slug": "linked-list-cycle-ii",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/linked-list-cycle-ii/"
+      },
+      {
+        "id": "p_19_2",
+        "title": "Find the Duplicate Number",
+        "slug": "find-the-duplicate-number",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/find-the-duplicate-number/"
+      },
+      {
+        "id": "p_19_3",
+        "title": "Happy Number",
+        "slug": "happy-number",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/happy-number/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_20",
+    "title": "Linked List — Reversal Family",
+    "category": "Linked Lists",
+    "note": "Reverse Linked List must become muscle memory — write it 3 times today, iterative and recursive.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/linked-list-data-structure/",
+    "videos": [
+      {
+        "id": "v_20_1",
+        "title": "Linked List Reversal, The Easiest Way",
+        "ytId": "7gOCx1vbx0k",
+        "url": "https://www.youtube.com/watch?v=7gOCx1vbx0k"
+      },
+      {
+        "id": "v_20_2",
+        "title": "Reverse Nodes in K Group",
+        "ytId": "BdpT6_jotcM",
+        "url": "https://www.youtube.com/watch?v=BdpT6_jotcM"
+      },
+      {
+        "id": "v_20_3",
+        "title": "Rotate A Linked List",
+        "ytId": "5IV8CgWnf04",
+        "url": "https://www.youtube.com/watch?v=5IV8CgWnf04"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_20_1",
+        "title": "Reverse Linked List",
+        "slug": "reverse-linked-list",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/reverse-linked-list/"
+      },
+      {
+        "id": "p_20_2",
+        "title": "Reverse Nodes in k-Group",
+        "slug": "reverse-nodes-in-k-group",
+        "diff": "H",
+        "url": "https://leetcode.com/problems/reverse-nodes-in-k-group/"
+      },
+      {
+        "id": "p_20_3",
+        "title": "Rotate List",
+        "slug": "rotate-list",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/rotate-list/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_21",
+    "title": "Merge Intervals — Introduction",
+    "category": "Arrays & Hashing",
+    "note": "Sort by start time first — that single line solves half of all interval problems.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/merging-intervals/",
+    "videos": [
+      {
+        "id": "v_21_1",
+        "title": "Master Merge Interval DSA Pattern",
+        "ytId": "aH5aeejuJU8",
+        "url": "https://www.youtube.com/watch?v=aH5aeejuJU8"
+      },
+      {
+        "id": "v_21_2",
+        "title": "Merge Interval — Part 2",
+        "ytId": "yAopxaHmRn0",
+        "url": "https://www.youtube.com/watch?v=yAopxaHmRn0"
+      },
+      {
+        "id": "v_21_3",
+        "title": "Merge Intervals — Part 3",
+        "ytId": "yoh0p_Ag7Q4",
+        "url": "https://www.youtube.com/watch?v=yoh0p_Ag7Q4"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_21_1",
+        "title": "Merge Intervals",
+        "slug": "merge-intervals",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/merge-intervals/"
+      },
+      {
+        "id": "p_21_2",
+        "title": "Insert Interval",
+        "slug": "insert-interval",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/insert-interval/"
+      },
+      {
+        "id": "p_21_3",
+        "title": "Non-overlapping Intervals",
+        "slug": "non-overlapping-intervals",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/non-overlapping-intervals/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_22",
+    "title": "Merge Intervals — Interview Questions",
+    "category": "Arrays & Hashing",
+    "note": "Meeting-room style questions are the #1 interval question in Indian product-company interviews.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/merging-intervals/",
+    "videos": [
+      {
+        "id": "v_22_1",
+        "title": "Merge Overlapping Intervals",
+        "ytId": "b-qtjXsGfqo",
+        "url": "https://www.youtube.com/watch?v=b-qtjXsGfqo"
+      },
+      {
+        "id": "v_22_2",
+        "title": "Merge Interval Interview Questions (FAANG)",
+        "ytId": "o-ozvzzFpKA",
+        "url": "https://www.youtube.com/watch?v=o-ozvzzFpKA"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_22_1",
+        "title": "Minimum Number of Arrows to Burst Balloons",
+        "slug": "minimum-number-of-arrows-to-burst-balloons",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/"
+      },
+      {
+        "id": "p_22_2",
+        "title": "Interval List Intersections",
+        "slug": "interval-list-intersections",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/interval-list-intersections/"
+      },
+      {
+        "id": "p_22_3",
+        "title": "Car Pooling",
+        "slug": "car-pooling",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/car-pooling/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_23",
+    "title": "Stack — Fundamentals",
+    "category": "Stacks & Queues",
+    "note": "Min Stack teaches you to store extra info alongside data — a trick you'll reuse everywhere.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/stack-data-structure/",
+    "videos": [
+      {
+        "id": "v_23_1",
+        "title": "Introduction to Stack",
+        "ytId": "V0wJuik3WSE",
+        "url": "https://www.youtube.com/watch?v=V0wJuik3WSE"
+      },
+      {
+        "id": "v_23_2",
+        "title": "Master Stack With This Simple Trick",
+        "ytId": "K1idN2Rqcmw",
+        "url": "https://www.youtube.com/watch?v=K1idN2Rqcmw"
+      },
+      {
+        "id": "v_23_3",
+        "title": "Most Important STACK Question for FAANG",
+        "ytId": "YutYOZFt6sQ",
+        "url": "https://www.youtube.com/watch?v=YutYOZFt6sQ"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_23_1",
+        "title": "Valid Parentheses",
+        "slug": "valid-parentheses",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/valid-parentheses/"
+      },
+      {
+        "id": "p_23_2",
+        "title": "Min Stack",
+        "slug": "min-stack",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/min-stack/"
+      },
+      {
+        "id": "p_23_3",
+        "title": "Evaluate Reverse Polish Notation",
+        "slug": "evaluate-reverse-polish-notation",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/evaluate-reverse-polish-notation/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_24",
+    "title": "Stack — Monotonic Stack",
+    "category": "Stacks & Queues",
+    "note": "Monotonic stack = 'next greater / next smaller'. Once you see it, you see it everywhere.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/stack-data-structure/",
+    "videos": [
+      {
+        "id": "v_24_1",
+        "title": "Next Greater Element",
+        "ytId": "gFqOIPfAEjw",
+        "url": "https://www.youtube.com/watch?v=gFqOIPfAEjw"
+      },
+      {
+        "id": "v_24_2",
+        "title": "Master Stack With 3 Questions",
+        "ytId": "mMKZmo3iyyM",
+        "url": "https://www.youtube.com/watch?v=mMKZmo3iyyM"
+      },
+      {
+        "id": "v_24_3",
+        "title": "Revise Stack in 10 Minutes",
+        "ytId": "XpHIIQwVxvI",
+        "url": "https://www.youtube.com/watch?v=XpHIIQwVxvI"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_24_1",
+        "title": "Next Greater Element I",
+        "slug": "next-greater-element-i",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/next-greater-element-i/"
+      },
+      {
+        "id": "p_24_2",
+        "title": "Daily Temperatures",
+        "slug": "daily-temperatures",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/daily-temperatures/"
+      },
+      {
+        "id": "p_24_3",
+        "title": "Largest Rectangle in Histogram",
+        "slug": "largest-rectangle-in-histogram",
+        "diff": "H",
+        "url": "https://leetcode.com/problems/largest-rectangle-in-histogram/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_25",
+    "title": "Binary Search — Fundamentals",
+    "category": "Binary Search",
+    "note": "AI track starts today. 90 min DSA + 30 min AI. Don't skip the AI video — it compounds.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/binary-search/",
+    "videos": [
+      {
+        "id": "v_25_1",
+        "title": "You DON'T Know Binary Search",
+        "ytId": "S0E1Ix67qbc",
+        "url": "https://www.youtube.com/watch?v=S0E1Ix67qbc"
+      },
+      {
+        "id": "v_25_2",
+        "title": "The Best Intro To Binary Search",
+        "ytId": "zEEwwS9_fwA",
+        "url": "https://www.youtube.com/watch?v=zEEwwS9_fwA"
+      },
+      {
+        "id": "v_25_3",
+        "title": "Find Mountain Peak",
+        "ytId": "RuBcXYteHj0",
+        "url": "https://www.youtube.com/watch?v=RuBcXYteHj0"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_25_1",
+        "title": "Binary Search",
+        "slug": "binary-search",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/binary-search/"
+      },
+      {
+        "id": "p_25_2",
+        "title": "Search Insert Position",
+        "slug": "search-insert-position",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/search-insert-position/"
+      },
+      {
+        "id": "p_25_3",
+        "title": "First Bad Version",
+        "slug": "first-bad-version",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/first-bad-version/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_26",
+    "title": "Binary Search — Rotated Arrays",
+    "category": "Binary Search",
+    "note": "Set up your Python env + API key today alongside the AI video. Get it working before Day 27.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/binary-search/",
+    "videos": [
+      {
+        "id": "v_26_1",
+        "title": "I Will Make Binary Search Easy For You",
+        "ytId": "91qkzhmEO48",
+        "url": "https://www.youtube.com/watch?v=91qkzhmEO48"
+      },
+      {
+        "id": "v_26_2",
+        "title": "Don't Miss This Binary Search Question",
+        "ytId": "TIBZsd-Qlrg",
+        "url": "https://www.youtube.com/watch?v=TIBZsd-Qlrg"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_26_1",
+        "title": "Find Peak Element",
+        "slug": "find-peak-element",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/find-peak-element/"
+      },
+      {
+        "id": "p_26_2",
+        "title": "Search in Rotated Sorted Array",
+        "slug": "search-in-rotated-sorted-array",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/search-in-rotated-sorted-array/"
+      },
+      {
+        "id": "p_26_3",
+        "title": "Find Minimum in Rotated Sorted Array",
+        "slug": "find-minimum-in-rotated-sorted-array",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_27",
+    "title": "Binary Search on Answer",
+    "category": "Binary Search",
+    "note": "'Binary search on answer' is the single highest-ROI pattern for product-company rounds.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/binary-search/",
+    "videos": [
+      {
+        "id": "v_27_1",
+        "title": "Solve All Binary Search Questions",
+        "ytId": "0Kxg0LPGwFo",
+        "url": "https://www.youtube.com/watch?v=0Kxg0LPGwFo"
+      },
+      {
+        "id": "v_27_2",
+        "title": "Aggressive Cows Explained",
+        "ytId": "TF53eWL47ws",
+        "url": "https://www.youtube.com/watch?v=TF53eWL47ws"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_27_1",
+        "title": "Koko Eating Bananas",
+        "slug": "koko-eating-bananas",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/koko-eating-bananas/"
+      },
+      {
+        "id": "p_27_2",
+        "title": "Capacity To Ship Packages Within D Days",
+        "slug": "capacity-to-ship-packages-within-d-days",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/"
+      },
+      {
+        "id": "p_27_3",
+        "title": "Split Array Largest Sum",
+        "slug": "split-array-largest-sum",
+        "diff": "H",
+        "url": "https://leetcode.com/problems/split-array-largest-sum/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_28",
+    "title": "Binary Search — 2D & Hard",
+    "category": "Binary Search",
+    "note": "Median of Two Sorted Arrays is hard. Attempt, fail, watch, redo tomorrow. That's the loop.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/binary-search/",
+    "videos": [
+      {
+        "id": "v_28_1",
+        "title": "Amazon Binary Search Question",
+        "ytId": "TqxB7zruBm4",
+        "url": "https://www.youtube.com/watch?v=TqxB7zruBm4"
+      },
+      {
+        "id": "v_28_2",
+        "title": "Binary Search on 2D Array",
+        "ytId": "stji3QvQ-OU",
+        "url": "https://www.youtube.com/watch?v=stji3QvQ-OU"
+      },
+      {
+        "id": "v_28_3",
+        "title": "The 40 LPA Binary Search Question",
+        "ytId": "DSGtYGZKEZ4",
+        "url": "https://www.youtube.com/watch?v=DSGtYGZKEZ4"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_28_1",
+        "title": "Search a 2D Matrix",
+        "slug": "search-a-2d-matrix",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/search-a-2d-matrix/"
+      },
+      {
+        "id": "p_28_2",
+        "title": "Find First and Last Position of Element",
+        "slug": "find-first-and-last-position-of-element-in-sorted-array",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/"
+      },
+      {
+        "id": "p_28_3",
+        "title": "Median of Two Sorted Arrays",
+        "slug": "median-of-two-sorted-arrays",
+        "diff": "H",
+        "url": "https://leetcode.com/problems/median-of-two-sorted-arrays/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_29",
+    "title": "Heap — Introduction",
+    "category": "Heaps & Priority Queues",
+    "note": "Min-heap for 'k largest', max-heap for 'k smallest'. Counter-intuitive — write it on a sticky note.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/heap-data-structure/",
+    "videos": [
+      {
+        "id": "v_29_1",
+        "title": "Introduction To Heap DSA Pattern",
+        "ytId": "_1AbrkD8pak",
+        "url": "https://www.youtube.com/watch?v=_1AbrkD8pak"
+      },
+      {
+        "id": "v_29_2",
+        "title": "The Best Video To Learn HEAP",
+        "ytId": "zzu-k85RLGs",
+        "url": "https://www.youtube.com/watch?v=zzu-k85RLGs"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_29_1",
+        "title": "Kth Largest Element in an Array",
+        "slug": "kth-largest-element-in-an-array",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/kth-largest-element-in-an-array/"
+      },
+      {
+        "id": "p_29_2",
+        "title": "Last Stone Weight",
+        "slug": "last-stone-weight",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/last-stone-weight/"
+      },
+      {
+        "id": "p_29_3",
+        "title": "Kth Largest Element in a Stream",
+        "slug": "kth-largest-element-in-a-stream",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/kth-largest-element-in-a-stream/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_30",
+    "title": "Heap — Top K Pattern",
+    "category": "Heaps & Priority Queues",
+    "note": "One month done. Look back at Day 1 — you couldn't write a loop. Now you're doing heaps.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/heap-data-structure/",
+    "videos": [
+      {
+        "id": "v_30_1",
+        "title": "HEAP On Pairs Explained",
+        "ytId": "I1-0ALAJxZI",
+        "url": "https://www.youtube.com/watch?v=I1-0ALAJxZI"
+      },
+      {
+        "id": "v_30_2",
+        "title": "Solve Any HEAP Question By This Template",
+        "ytId": "5Net0Dd7NAA",
+        "url": "https://www.youtube.com/watch?v=5Net0Dd7NAA"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_30_1",
+        "title": "Top K Frequent Elements",
+        "slug": "top-k-frequent-elements",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/top-k-frequent-elements/"
+      },
+      {
+        "id": "p_30_2",
+        "title": "K Closest Points to Origin",
+        "slug": "k-closest-points-to-origin",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/k-closest-points-to-origin/"
+      },
+      {
+        "id": "p_30_3",
+        "title": "Sort Characters By Frequency",
+        "slug": "sort-characters-by-frequency",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/sort-characters-by-frequency/"
+      },
+      {
+        "id": "p_30_add_daily-temperatures",
+        "title": "Daily Temperatures",
+        "slug": "daily-temperatures",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/daily-temperatures/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_31",
+    "title": "Heap — Greedy Combination",
+    "category": "Heaps & Priority Queues",
+    "note": "AI mini project day — actually build it, don't just watch. A built project beats 10 watched videos.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/heap-data-structure/",
+    "videos": [
+      {
+        "id": "v_31_1",
+        "title": "5 Step Template For Any HEAP Problem",
+        "ytId": "ks8rocoXbJk",
+        "url": "https://www.youtube.com/watch?v=ks8rocoXbJk"
+      },
+      {
+        "id": "v_31_2",
+        "title": "HEAP Greedy DSA Pattern",
+        "ytId": "SCe8N_v-8Ls",
+        "url": "https://www.youtube.com/watch?v=SCe8N_v-8Ls"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_31_1",
+        "title": "Reorganize String",
+        "slug": "reorganize-string",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/reorganize-string/"
+      },
+      {
+        "id": "p_31_2",
+        "title": "Furthest Building You Can Reach",
+        "slug": "furthest-building-you-can-reach",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/furthest-building-you-can-reach/"
+      },
+      {
+        "id": "p_31_3",
+        "title": "Maximum Number of Events That Can Be Attended",
+        "slug": "maximum-number-of-events-that-can-be-attended",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_32",
+    "title": "Heap — Hard Problems",
+    "category": "Heaps & Priority Queues",
+    "note": "Merge k Sorted Lists is asked at Microsoft, Amazon and Google. Non-negotiable.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/heap-data-structure/",
+    "videos": [
+      {
+        "id": "v_32_1",
+        "title": "Google Heap Question: IPO",
+        "ytId": "DYBWbmhisiM",
+        "url": "https://www.youtube.com/watch?v=DYBWbmhisiM"
+      },
+      {
+        "id": "v_32_2",
+        "title": "Merge K Sorted Lists",
+        "ytId": "55aenUfSIhQ",
+        "url": "https://www.youtube.com/watch?v=55aenUfSIhQ"
+      },
+      {
+        "id": "v_32_3",
+        "title": "CPU Task Scheduler",
+        "ytId": "1yax0YQOb8w",
+        "url": "https://www.youtube.com/watch?v=1yax0YQOb8w"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_32_1",
+        "title": "IPO",
+        "slug": "ipo",
+        "diff": "H",
+        "url": "https://leetcode.com/problems/ipo/"
+      },
+      {
+        "id": "p_32_2",
+        "title": "Merge k Sorted Lists",
+        "slug": "merge-k-sorted-lists",
+        "diff": "H",
+        "url": "https://leetcode.com/problems/merge-k-sorted-lists/"
+      },
+      {
+        "id": "p_32_3",
+        "title": "Task Scheduler",
+        "slug": "task-scheduler",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/task-scheduler/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_33",
+    "title": "Recursion — Foundations",
+    "category": "Recursion & Backtracking",
+    "note": "Recursion clicks when you stop tracing the whole tree and trust the recursive call. Let go.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/introduction-to-recursion-2/",
+    "videos": [
+      {
+        "id": "v_33_1",
+        "title": "Intro To Recursion DSA Pattern",
+        "ytId": "HdPb_thlF5s",
+        "url": "https://www.youtube.com/watch?v=HdPb_thlF5s"
+      },
+      {
+        "id": "v_33_2",
+        "title": "Recursion Fixed Template For All Questions",
+        "ytId": "Qh_U6NYf99o",
+        "url": "https://www.youtube.com/watch?v=Qh_U6NYf99o"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_33_1",
+        "title": "Fibonacci Number",
+        "slug": "fibonacci-number",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/fibonacci-number/"
+      },
+      {
+        "id": "p_33_2",
+        "title": "Power of Two",
+        "slug": "power-of-two",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/power-of-two/"
+      },
+      {
+        "id": "p_33_3",
+        "title": "Reverse String",
+        "slug": "reverse-string",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/reverse-string/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_34",
+    "title": "Recursion & Backtracking",
+    "category": "Recursion & Backtracking",
+    "note": "Subsets and Permutations are the two parent problems. Every backtracking question is their child.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/introduction-to-recursion-2/",
+    "videos": [
+      {
+        "id": "v_34_1",
+        "title": "Recursion & Backtracking Explained",
+        "ytId": "I081UkZCLlc",
+        "url": "https://www.youtube.com/watch?v=I081UkZCLlc"
+      },
+      {
+        "id": "v_34_2",
+        "title": "Learn Recursion Like A Pro",
+        "ytId": "j4wjZqzhMqc",
+        "url": "https://www.youtube.com/watch?v=j4wjZqzhMqc"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_34_1",
+        "title": "Subsets",
+        "slug": "subsets",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/subsets/"
+      },
+      {
+        "id": "p_34_2",
+        "title": "Permutations",
+        "slug": "permutations",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/permutations/"
+      },
+      {
+        "id": "p_34_3",
+        "title": "Letter Combinations of a Phone Number",
+        "slug": "letter-combinations-of-a-phone-number",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/letter-combinations-of-a-phone-number/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_35",
+    "title": "Backtracking — Core Problems",
+    "category": "Recursion & Backtracking",
+    "note": "Duplicates in backtracking = sort first, then skip equal siblings. Same fix every time.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/introduction-to-recursion-2/",
+    "videos": [
+      {
+        "id": "v_35_1",
+        "title": "Master Recursion in 3 Easy Questions",
+        "ytId": "-gC-QEdpvO4",
+        "url": "https://www.youtube.com/watch?v=-gC-QEdpvO4"
+      },
+      {
+        "id": "v_35_2",
+        "title": "Start Recursion Backtracking With This",
+        "ytId": "PqwlS4bcr1Y",
+        "url": "https://www.youtube.com/watch?v=PqwlS4bcr1Y"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_35_1",
+        "title": "Combination Sum",
+        "slug": "combination-sum",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/combination-sum/"
+      },
+      {
+        "id": "p_35_2",
+        "title": "Subsets II",
+        "slug": "subsets-ii",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/subsets-ii/"
+      },
+      {
+        "id": "p_35_3",
+        "title": "Palindrome Partitioning",
+        "slug": "palindrome-partitioning",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/palindrome-partitioning/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_36",
+    "title": "Backtracking — Hard",
+    "category": "Recursion & Backtracking",
+    "note": "N-Queens looks scary and is actually just 'place, recurse, undo'. You already know the pattern.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/introduction-to-recursion-2/",
+    "videos": [
+      {
+        "id": "v_36_1",
+        "title": "5 Point Template For Any Recursion Question",
+        "ytId": "IKfIT6uFOcs",
+        "url": "https://www.youtube.com/watch?v=IKfIT6uFOcs"
+      },
+      {
+        "id": "v_36_2",
+        "title": "Combination Sum Explained Simply",
+        "ytId": "AflRvP5LFFc",
+        "url": "https://www.youtube.com/watch?v=AflRvP5LFFc"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_36_1",
+        "title": "Word Search",
+        "slug": "word-search",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/word-search/"
+      },
+      {
+        "id": "p_36_2",
+        "title": "N-Queens",
+        "slug": "n-queens",
+        "diff": "H",
+        "url": "https://leetcode.com/problems/n-queens/"
+      },
+      {
+        "id": "p_36_3",
+        "title": "Sudoku Solver",
+        "slug": "sudoku-solver",
+        "diff": "H",
+        "url": "https://leetcode.com/problems/sudoku-solver/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_37",
+    "title": "Trees — Traversals",
+    "category": "Trees & BST",
+    "note": "Inorder of a BST is sorted. That one fact solves a surprising number of questions.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/binary-tree-data-structure/",
+    "videos": [
+      {
+        "id": "v_37_1",
+        "title": "Starting TREE Series",
+        "ytId": "VdujirLGDDE",
+        "url": "https://www.youtube.com/watch?v=VdujirLGDDE"
+      },
+      {
+        "id": "v_37_2",
+        "title": "Tree Traversals Made Simple",
+        "ytId": "ZvYJT_QwnEw",
+        "url": "https://www.youtube.com/watch?v=ZvYJT_QwnEw"
+      },
+      {
+        "id": "v_37_3",
+        "title": "Level Order Traversal",
+        "ytId": "-g6h0Ok1Buk",
+        "url": "https://www.youtube.com/watch?v=-g6h0Ok1Buk"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_37_1",
+        "title": "Binary Tree Inorder Traversal",
+        "slug": "binary-tree-inorder-traversal",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/binary-tree-inorder-traversal/"
+      },
+      {
+        "id": "p_37_2",
+        "title": "Binary Tree Preorder Traversal",
+        "slug": "binary-tree-preorder-traversal",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/binary-tree-preorder-traversal/"
+      },
+      {
+        "id": "p_37_3",
+        "title": "Binary Tree Level Order Traversal",
+        "slug": "binary-tree-level-order-traversal",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/binary-tree-level-order-traversal/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_38",
+    "title": "Trees — The Universal Pattern",
+    "category": "Trees & BST",
+    "note": "Almost every tree question = solve left, solve right, combine. Find that shape in each problem.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/binary-tree-data-structure/",
+    "videos": [
+      {
+        "id": "v_38_1",
+        "title": "One Pattern To Solve Any Tree Question",
+        "ytId": "nkWopJZsqXc",
+        "url": "https://www.youtube.com/watch?v=nkWopJZsqXc"
+      },
+      {
+        "id": "v_38_2",
+        "title": "Check for Symmetrical Binary Trees",
+        "ytId": "dXJdiFMLdZQ",
+        "url": "https://www.youtube.com/watch?v=dXJdiFMLdZQ"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_38_1",
+        "title": "Maximum Depth of Binary Tree",
+        "slug": "maximum-depth-of-binary-tree",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/maximum-depth-of-binary-tree/"
+      },
+      {
+        "id": "p_38_2",
+        "title": "Same Tree",
+        "slug": "same-tree",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/same-tree/"
+      },
+      {
+        "id": "p_38_3",
+        "title": "Symmetric Tree",
+        "slug": "symmetric-tree",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/symmetric-tree/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_39",
+    "title": "Trees — LCA & BST Intro",
+    "category": "Trees & BST",
+    "note": "LCA in BST is 3 lines. LCA in Binary Tree is 5. Know why the BST version is shorter.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/binary-tree-data-structure/",
+    "videos": [
+      {
+        "id": "v_39_1",
+        "title": "LCA in Binary Tree",
+        "ytId": "_UoIHF3KUpE",
+        "url": "https://www.youtube.com/watch?v=_UoIHF3KUpE"
+      },
+      {
+        "id": "v_39_2",
+        "title": "Introduction to Binary Search Tree",
+        "ytId": "CDo0V5Jbb2o",
+        "url": "https://www.youtube.com/watch?v=CDo0V5Jbb2o"
+      },
+      {
+        "id": "v_39_3",
+        "title": "LCA in Binary Search Tree",
+        "ytId": "QopDohCvJVA",
+        "url": "https://www.youtube.com/watch?v=QopDohCvJVA"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_39_1",
+        "title": "Lowest Common Ancestor of a Binary Tree",
+        "slug": "lowest-common-ancestor-of-a-binary-tree",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/"
+      },
+      {
+        "id": "p_39_2",
+        "title": "Lowest Common Ancestor of a BST",
+        "slug": "lowest-common-ancestor-of-a-binary-search-tree",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/"
+      },
+      {
+        "id": "p_39_3",
+        "title": "Search in a Binary Search Tree",
+        "slug": "search-in-a-binary-search-tree",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/search-in-a-binary-search-tree/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_40",
+    "title": "Trees — BST Problems",
+    "category": "Trees & BST",
+    "note": "Diameter teaches 'return one thing, track another'. That trick unlocks the hard tree problems.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/binary-tree-data-structure/",
+    "videos": [
+      {
+        "id": "v_40_1",
+        "title": "Two Sum in Binary Search Tree",
+        "ytId": "Zr2z8DD6TuQ",
+        "url": "https://www.youtube.com/watch?v=Zr2z8DD6TuQ"
+      },
+      {
+        "id": "v_40_2",
+        "title": "Path Sum in 5 Minutes",
+        "ytId": "Sat-0sqezpM",
+        "url": "https://www.youtube.com/watch?v=Sat-0sqezpM"
+      },
+      {
+        "id": "v_40_3",
+        "title": "Diameter of Binary Tree",
+        "ytId": "_V7J7exlyzk",
+        "url": "https://www.youtube.com/watch?v=_V7J7exlyzk"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_40_1",
+        "title": "Two Sum IV — Input is a BST",
+        "slug": "two-sum-iv-input-is-a-bst",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/two-sum-iv-input-is-a-bst/"
+      },
+      {
+        "id": "p_40_2",
+        "title": "Path Sum",
+        "slug": "path-sum",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/path-sum/"
+      },
+      {
+        "id": "p_40_3",
+        "title": "Diameter of Binary Tree",
+        "slug": "diameter-of-binary-tree",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/diameter-of-binary-tree/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_41",
+    "title": "Trees — Validation & Construction",
+    "category": "Trees & BST",
+    "note": "Validating a BST by comparing only parent-child is the classic wrong answer. Carry min/max ranges.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/binary-tree-data-structure/",
+    "videos": [
+      {
+        "id": "v_41_1",
+        "title": "The BST Validation Problem Everyone Gets Wrong",
+        "ytId": "5PrzZfhk1OQ",
+        "url": "https://www.youtube.com/watch?v=5PrzZfhk1OQ"
+      },
+      {
+        "id": "v_41_2",
+        "title": "Construct Binary Tree from Preorder & Inorder",
+        "ytId": "14NH9aD7XeY",
+        "url": "https://www.youtube.com/watch?v=14NH9aD7XeY"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_41_1",
+        "title": "Validate Binary Search Tree",
+        "slug": "validate-binary-search-tree",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/validate-binary-search-tree/"
+      },
+      {
+        "id": "p_41_2",
+        "title": "Kth Smallest Element in a BST",
+        "slug": "kth-smallest-element-in-a-bst",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/kth-smallest-element-in-a-bst/"
+      },
+      {
+        "id": "p_41_3",
+        "title": "Construct Binary Tree from Preorder and Inorder Traversal",
+        "slug": "construct-binary-tree-from-preorder-and-inorder-traversal",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_42",
+    "title": "Graphs — Representation & DFS/BFS",
+    "category": "Graphs",
+    "note": "A 2D grid IS a graph. Once you accept that, half of graph questions become easy.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/graph-data-structure-and-algorithms/",
+    "videos": [
+      {
+        "id": "v_42_1",
+        "title": "Intro To Graphs DSA Pattern",
+        "ytId": "vcx1HWoHK1o",
+        "url": "https://www.youtube.com/watch?v=vcx1HWoHK1o"
+      },
+      {
+        "id": "v_42_2",
+        "title": "Adjacency Matrix vs Adjacency List",
+        "ytId": "WR-hWofGb_U",
+        "url": "https://www.youtube.com/watch?v=WR-hWofGb_U"
+      },
+      {
+        "id": "v_42_3",
+        "title": "Master DFS/BFS in Graphs",
+        "ytId": "O04KAy7cLBs",
+        "url": "https://www.youtube.com/watch?v=O04KAy7cLBs"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_42_1",
+        "title": "Find if Path Exists in Graph",
+        "slug": "find-if-path-exists-in-graph",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/find-if-path-exists-in-graph/"
+      },
+      {
+        "id": "p_42_2",
+        "title": "Flood Fill",
+        "slug": "flood-fill",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/flood-fill/"
+      },
+      {
+        "id": "p_42_3",
+        "title": "Max Area of Island",
+        "slug": "max-area-of-island",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/max-area-of-island/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_43",
+    "title": "Graphs — Grid BFS & DFS",
+    "category": "Graphs",
+    "note": "Number of Islands is THE most asked graph question in Indian placement drives.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/graph-data-structure-and-algorithms/",
+    "videos": [
+      {
+        "id": "v_43_1",
+        "title": "Number of Islands",
+        "ytId": "mbSYZzBjs4U",
+        "url": "https://www.youtube.com/watch?v=mbSYZzBjs4U"
+      },
+      {
+        "id": "v_43_2",
+        "title": "Rotten Oranges: Multi-Source BFS",
+        "ytId": "4L4MYtxGh9s",
+        "url": "https://www.youtube.com/watch?v=4L4MYtxGh9s"
+      },
+      {
+        "id": "v_43_3",
+        "title": "DFS Cycle Detection",
+        "ytId": "D5jgZ4PnU5o",
+        "url": "https://www.youtube.com/watch?v=D5jgZ4PnU5o"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_43_1",
+        "title": "Number of Islands",
+        "slug": "number-of-islands",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/number-of-islands/"
+      },
+      {
+        "id": "p_43_2",
+        "title": "Rotting Oranges",
+        "slug": "rotting-oranges",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/rotting-oranges/"
+      },
+      {
+        "id": "p_43_3",
+        "title": "01 Matrix",
+        "slug": "01-matrix",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/01-matrix/"
+      },
+      {
+        "id": "p_43_add_clone-graph",
+        "title": "Clone Graph",
+        "slug": "clone-graph",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/clone-graph/"
+      },
+      {
+        "id": "p_43_add_course-schedule",
+        "title": "Course Schedule",
+        "slug": "course-schedule",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/course-schedule/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_44",
+    "title": "Graphs — Topological Sort & Bipartite",
+    "category": "Graphs",
+    "note": "'Can you finish all courses' = cycle detection in a directed graph. Recognise the disguise.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/graph-data-structure-and-algorithms/",
+    "videos": [
+      {
+        "id": "v_44_1",
+        "title": "Topological Sort Explained",
+        "ytId": "OSYgRvaWFSI",
+        "url": "https://www.youtube.com/watch?v=OSYgRvaWFSI"
+      },
+      {
+        "id": "v_44_2",
+        "title": "Bipartite Graph / Graph Coloring",
+        "ytId": "LIGrIglQ7TY",
+        "url": "https://www.youtube.com/watch?v=LIGrIglQ7TY"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_44_1",
+        "title": "Course Schedule",
+        "slug": "course-schedule",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/course-schedule/"
+      },
+      {
+        "id": "p_44_2",
+        "title": "Course Schedule II",
+        "slug": "course-schedule-ii",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/course-schedule-ii/"
+      },
+      {
+        "id": "p_44_3",
+        "title": "Is Graph Bipartite?",
+        "slug": "is-graph-bipartite",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/is-graph-bipartite/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_45",
+    "title": "Graphs — Shortest Path Basics",
+    "category": "Graphs",
+    "note": "Unweighted shortest path = plain BFS. Don't reach for Dijkstra when BFS is enough.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/graph-data-structure-and-algorithms/",
+    "videos": [
+      {
+        "id": "v_45_1",
+        "title": "Surrounded Regions",
+        "ytId": "6ZtNHvGeEu4",
+        "url": "https://www.youtube.com/watch?v=6ZtNHvGeEu4"
+      },
+      {
+        "id": "v_45_2",
+        "title": "Shortest Path in Non-Weighted Graph",
+        "ytId": "HBI6DQOT_qk",
+        "url": "https://www.youtube.com/watch?v=HBI6DQOT_qk"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_45_1",
+        "title": "Surrounded Regions",
+        "slug": "surrounded-regions",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/surrounded-regions/"
+      },
+      {
+        "id": "p_45_2",
+        "title": "Shortest Path in Binary Matrix",
+        "slug": "shortest-path-in-binary-matrix",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/shortest-path-in-binary-matrix/"
+      },
+      {
+        "id": "p_45_3",
+        "title": "Network Delay Time",
+        "slug": "network-delay-time",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/network-delay-time/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_46",
+    "title": "Graphs — Dijkstra & Bellman-Ford",
+    "category": "Graphs",
+    "note": "Dijkstra = BFS with a priority queue. That's genuinely the whole idea.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/graph-data-structure-and-algorithms/",
+    "videos": [
+      {
+        "id": "v_46_1",
+        "title": "Dijkstra's Algorithm Explained",
+        "ytId": "93copdtW4ZQ",
+        "url": "https://www.youtube.com/watch?v=93copdtW4ZQ"
+      },
+      {
+        "id": "v_46_2",
+        "title": "2 Important Dijkstra Questions",
+        "ytId": "Mb01XUSuLjE",
+        "url": "https://www.youtube.com/watch?v=Mb01XUSuLjE"
+      },
+      {
+        "id": "v_46_3",
+        "title": "Bellman-Ford Algorithm",
+        "ytId": "A3sZWwalzz4",
+        "url": "https://www.youtube.com/watch?v=A3sZWwalzz4"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_46_1",
+        "title": "Path With Minimum Effort",
+        "slug": "path-with-minimum-effort",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/path-with-minimum-effort/"
+      },
+      {
+        "id": "p_46_2",
+        "title": "Cheapest Flights Within K Stops",
+        "slug": "cheapest-flights-within-k-stops",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/cheapest-flights-within-k-stops/"
+      },
+      {
+        "id": "p_46_3",
+        "title": "Swim in Rising Water",
+        "slug": "swim-in-rising-water",
+        "diff": "H",
+        "url": "https://leetcode.com/problems/swim-in-rising-water/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_47",
+    "title": "Graphs — MST & Word Ladder",
+    "category": "Graphs",
+    "note": "Graphs done. This is where most self-study students quit — you didn't.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/graph-data-structure-and-algorithms/",
+    "videos": [
+      {
+        "id": "v_47_1",
+        "title": "Cheapest Flights Within K Stops",
+        "ytId": "-AEEZEWOA-E",
+        "url": "https://www.youtube.com/watch?v=-AEEZEWOA-E"
+      },
+      {
+        "id": "v_47_2",
+        "title": "Prim's Algorithm — Minimum Spanning Tree",
+        "ytId": "u0SH8wO85m0",
+        "url": "https://www.youtube.com/watch?v=u0SH8wO85m0"
+      },
+      {
+        "id": "v_47_3",
+        "title": "Word Ladder Explained",
+        "ytId": "HpsjPUwQHfw",
+        "url": "https://www.youtube.com/watch?v=HpsjPUwQHfw"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_47_1",
+        "title": "Min Cost to Connect All Points",
+        "slug": "min-cost-to-connect-all-points",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/min-cost-to-connect-all-points/"
+      },
+      {
+        "id": "p_47_2",
+        "title": "Word Ladder",
+        "slug": "word-ladder",
+        "diff": "H",
+        "url": "https://leetcode.com/problems/word-ladder/"
+      },
+      {
+        "id": "p_47_3",
+        "title": "Number of Provinces",
+        "slug": "number-of-provinces",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/number-of-provinces/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_48",
+    "title": "DP — Introduction",
+    "category": "Dynamic Programming",
+    "note": "DP = recursion + memo. You already know recursion. This is one extra line, not a new subject.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/dynamic-programming/",
+    "videos": [
+      {
+        "id": "v_48_1",
+        "title": "Introduction To Dynamic Programming",
+        "ytId": "cmSh2xbyX7g",
+        "url": "https://www.youtube.com/watch?v=cmSh2xbyX7g"
+      },
+      {
+        "id": "v_48_2",
+        "title": "When And How To Use DP",
+        "ytId": "-CvRpL_iUKo",
+        "url": "https://www.youtube.com/watch?v=-CvRpL_iUKo"
+      },
+      {
+        "id": "v_48_3",
+        "title": "Climbing Stairs — 1D DP",
+        "ytId": "JLdrJE7udZo",
+        "url": "https://www.youtube.com/watch?v=JLdrJE7udZo"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_48_1",
+        "title": "Climbing Stairs",
+        "slug": "climbing-stairs",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/climbing-stairs/"
+      },
+      {
+        "id": "p_48_2",
+        "title": "Min Cost Climbing Stairs",
+        "slug": "min-cost-climbing-stairs",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/min-cost-climbing-stairs/"
+      },
+      {
+        "id": "p_48_3",
+        "title": "Fibonacci Number",
+        "slug": "fibonacci-number",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/fibonacci-number/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_49",
+    "title": "DP — House Robber & Knapsack",
+    "category": "Dynamic Programming",
+    "note": "Write every DP problem as recursion + memo FIRST. Convert to tabulation only after it works.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/dynamic-programming/",
+    "videos": [
+      {
+        "id": "v_49_1",
+        "title": "House Robber",
+        "ytId": "FMhXZU-eUNQ",
+        "url": "https://www.youtube.com/watch?v=FMhXZU-eUNQ"
+      },
+      {
+        "id": "v_49_2",
+        "title": "0/1 Knapsack",
+        "ytId": "Yp1G_KY7-wY",
+        "url": "https://www.youtube.com/watch?v=Yp1G_KY7-wY"
+      },
+      {
+        "id": "v_49_3",
+        "title": "Tabulation Explained",
+        "ytId": "yEwnsPI_tUY",
+        "url": "https://www.youtube.com/watch?v=yEwnsPI_tUY"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_49_1",
+        "title": "House Robber",
+        "slug": "house-robber",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/house-robber/"
+      },
+      {
+        "id": "p_49_2",
+        "title": "House Robber II",
+        "slug": "house-robber-ii",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/house-robber-ii/"
+      },
+      {
+        "id": "p_49_3",
+        "title": "Partition Equal Subset Sum",
+        "slug": "partition-equal-subset-sum",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/partition-equal-subset-sum/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_50",
+    "title": "DP — Subset Sum Family",
+    "category": "Dynamic Programming",
+    "note": "10 days left. Coin Change is the knapsack you'll actually be asked in an interview.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/dynamic-programming/",
+    "videos": [
+      {
+        "id": "v_50_1",
+        "title": "0-1 Knapsack Tabulation",
+        "ytId": "LWDYXNN4SHU",
+        "url": "https://www.youtube.com/watch?v=LWDYXNN4SHU"
+      },
+      {
+        "id": "v_50_2",
+        "title": "Subset Sum Equals Target",
+        "ytId": "M0XjVs41H2s",
+        "url": "https://www.youtube.com/watch?v=M0XjVs41H2s"
+      },
+      {
+        "id": "v_50_3",
+        "title": "3 DP Problems in 30 Minutes",
+        "ytId": "QqDR0Fo9ayM",
+        "url": "https://www.youtube.com/watch?v=QqDR0Fo9ayM"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_50_1",
+        "title": "Target Sum",
+        "slug": "target-sum",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/target-sum/"
+      },
+      {
+        "id": "p_50_2",
+        "title": "Coin Change",
+        "slug": "coin-change",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/coin-change/"
+      },
+      {
+        "id": "p_50_3",
+        "title": "Coin Change II",
+        "slug": "coin-change-ii",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/coin-change-ii/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_51",
+    "title": "DP — LIS & LCS",
+    "category": "Dynamic Programming",
+    "note": "LCS is the parent of Edit Distance, Longest Palindromic Subsequence and more. Master the parent.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/dynamic-programming/",
+    "videos": [
+      {
+        "id": "v_51_1",
+        "title": "Longest Increasing Subsequence — Part 1",
+        "ytId": "CdGBURVBMn4",
+        "url": "https://www.youtube.com/watch?v=CdGBURVBMn4"
+      },
+      {
+        "id": "v_51_2",
+        "title": "LIS: From Recursion to Tabulation",
+        "ytId": "w9qndpVOHks",
+        "url": "https://www.youtube.com/watch?v=w9qndpVOHks"
+      },
+      {
+        "id": "v_51_3",
+        "title": "LCS In 20 Minutes",
+        "ytId": "YkM-xfnZ4DY",
+        "url": "https://www.youtube.com/watch?v=YkM-xfnZ4DY"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_51_1",
+        "title": "Longest Increasing Subsequence",
+        "slug": "longest-increasing-subsequence",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/longest-increasing-subsequence/"
+      },
+      {
+        "id": "p_51_2",
+        "title": "Longest Common Subsequence",
+        "slug": "longest-common-subsequence",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/longest-common-subsequence/"
+      },
+      {
+        "id": "p_51_3",
+        "title": "Edit Distance",
+        "slug": "edit-distance",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/edit-distance/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_52",
+    "title": "DP — 2D Grids & Strings",
+    "category": "Dynamic Programming",
+    "note": "Grid DP is the friendliest DP. Draw the table and fill it by hand once.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/dynamic-programming/",
+    "videos": [
+      {
+        "id": "v_52_1",
+        "title": "The Easiest DP Question Ever",
+        "ytId": "lAdOVqukPCI",
+        "url": "https://www.youtube.com/watch?v=lAdOVqukPCI"
+      },
+      {
+        "id": "v_52_2",
+        "title": "Why I Am The Best DSA Teacher",
+        "ytId": "6XSrjOmTJio",
+        "url": "https://www.youtube.com/watch?v=6XSrjOmTJio"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_52_1",
+        "title": "Unique Paths",
+        "slug": "unique-paths",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/unique-paths/"
+      },
+      {
+        "id": "p_52_2",
+        "title": "Minimum Path Sum",
+        "slug": "minimum-path-sum",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/minimum-path-sum/"
+      },
+      {
+        "id": "p_52_3",
+        "title": "Longest Palindromic Substring",
+        "slug": "longest-palindromic-substring",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/longest-palindromic-substring/"
+      },
+      {
+        "id": "p_52_add_longest-common-subsequence",
+        "title": "Longest Common Subsequence",
+        "slug": "longest-common-subsequence",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/longest-common-subsequence/"
+      },
+      {
+        "id": "p_52_add_coin-change",
+        "title": "Coin Change",
+        "slug": "coin-change",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/coin-change/"
+      },
+      {
+        "id": "p_52_add_partition-equal-subset-sum",
+        "title": "Partition Equal Subset Sum",
+        "slug": "partition-equal-subset-sum",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/partition-equal-subset-sum/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_53",
+    "title": "DP — Hard & Full Revision",
+    "category": "Dynamic Programming",
+    "note": "DP done. From here on it's revision and interview reps, no new syllabus.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/dynamic-programming/",
+    "videos": [
+      {
+        "id": "v_53_1",
+        "title": "The Problem Most Teachers Skip",
+        "ytId": "wKao8Ttesqk",
+        "url": "https://www.youtube.com/watch?v=wKao8Ttesqk"
+      },
+      {
+        "id": "v_53_2",
+        "title": "DP Full Revision and Next Steps",
+        "ytId": "dyG4JBKh6tA",
+        "url": "https://www.youtube.com/watch?v=dyG4JBKh6tA"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_53_1",
+        "title": "Word Break",
+        "slug": "word-break",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/word-break/"
+      },
+      {
+        "id": "p_53_2",
+        "title": "Best Time to Buy and Sell Stock III",
+        "slug": "best-time-to-buy-and-sell-stock-iii",
+        "diff": "H",
+        "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/"
+      },
+      {
+        "id": "p_53_3",
+        "title": "Maximal Square",
+        "slug": "maximal-square",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/maximal-square/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_54",
+    "title": "Bit Manipulation & Greedy",
+    "category": "Greedy & Bit Manipulation",
+    "note": "Syllabus complete. All 162 videos done. Next 6 days: turning knowledge into offers.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/bitwise-algorithms/",
+    "videos": [
+      {
+        "id": "v_54_1",
+        "title": "Master Bit Manipulation in One Video",
+        "ytId": "T56nhL8Y1po",
+        "url": "https://www.youtube.com/watch?v=T56nhL8Y1po"
+      },
+      {
+        "id": "v_54_2",
+        "title": "Greedy Algorithms: Zero to Interview-Ready",
+        "ytId": "OaHw9ZZHknw",
+        "url": "https://www.youtube.com/watch?v=OaHw9ZZHknw"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_54_1",
+        "title": "Single Number",
+        "slug": "single-number",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/single-number/"
+      },
+      {
+        "id": "p_54_2",
+        "title": "Counting Bits",
+        "slug": "counting-bits",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/counting-bits/"
+      },
+      {
+        "id": "p_54_3",
+        "title": "Jump Game",
+        "slug": "jump-game",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/jump-game/"
+      },
+      {
+        "id": "p_54_4",
+        "title": "Gas Station",
+        "slug": "gas-station",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/gas-station/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_55",
+    "title": "Mock 1 — Arrays, Strings & Hashing",
+    "category": "Placement Mocks",
+    "note": "Timed mock: 90 minutes, 4 problems, no hints. Score yourself honestly and note weak spots.",
+    "gfgUrl": "",
+    "videos": [
+      {
+        "id": "v_55_1",
+        "title": "My 4 Year DSA Journey & Mistakes",
+        "ytId": "7ztFXqo8nZo",
+        "url": "https://www.youtube.com/watch?v=7ztFXqo8nZo"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_55_1",
+        "title": "Longest Consecutive Sequence",
+        "slug": "longest-consecutive-sequence",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/longest-consecutive-sequence/"
+      },
+      {
+        "id": "p_55_2",
+        "title": "Spiral Matrix",
+        "slug": "spiral-matrix",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/spiral-matrix/"
+      },
+      {
+        "id": "p_55_3",
+        "title": "Set Matrix Zeroes",
+        "slug": "set-matrix-zeroes",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/set-matrix-zeroes/"
+      },
+      {
+        "id": "p_55_4",
+        "title": "Rotate Image",
+        "slug": "rotate-image",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/rotate-image/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_56",
+    "title": "Mock 2 — Linked List, Stack & Design",
+    "category": "Placement Mocks",
+    "note": "LRU Cache is a design + DSA hybrid. Product companies love it. Build it from scratch twice.",
+    "gfgUrl": "",
+    "videos": [
+      {
+        "id": "v_56_1",
+        "title": "The DSA Revolution Has Started",
+        "ytId": "EcQN1jziwDo",
+        "url": "https://www.youtube.com/watch?v=EcQN1jziwDo"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_56_1",
+        "title": "LRU Cache",
+        "slug": "lru-cache",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/lru-cache/"
+      },
+      {
+        "id": "p_56_2",
+        "title": "Add Two Numbers",
+        "slug": "add-two-numbers",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/add-two-numbers/"
+      },
+      {
+        "id": "p_56_3",
+        "title": "Sort List",
+        "slug": "sort-list",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/sort-list/"
+      },
+      {
+        "id": "p_56_4",
+        "title": "Implement Queue using Stacks",
+        "slug": "implement-queue-using-stacks",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/implement-queue-using-stacks/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_57",
+    "title": "Mock 3 — Trees & Graphs",
+    "category": "Placement Mocks",
+    "note": "Explain each solution OUT LOUD as you code. Interviews are spoken, not silent.",
+    "gfgUrl": "",
+    "videos": [
+      {
+        "id": "v_57_1",
+        "title": "Next Phase Plan For DSA Patterns",
+        "ytId": "GNz8F8MCOsU",
+        "url": "https://www.youtube.com/watch?v=GNz8F8MCOsU"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_57_1",
+        "title": "Binary Tree Right Side View",
+        "slug": "binary-tree-right-side-view",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/binary-tree-right-side-view/"
+      },
+      {
+        "id": "p_57_2",
+        "title": "Clone Graph",
+        "slug": "clone-graph",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/clone-graph/"
+      },
+      {
+        "id": "p_57_3",
+        "title": "Binary Tree Maximum Path Sum",
+        "slug": "binary-tree-maximum-path-sum",
+        "diff": "H",
+        "url": "https://leetcode.com/problems/binary-tree-maximum-path-sum/"
+      },
+      {
+        "id": "p_57_4",
+        "title": "Word Search II",
+        "slug": "word-search-ii",
+        "diff": "H",
+        "url": "https://leetcode.com/problems/word-search-ii/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_58",
+    "title": "Mock 4 — DP, Greedy & Bit Manipulation",
+    "category": "Placement Mocks",
+    "note": "Revisit every problem you failed in Mocks 1-3 before starting this one.",
+    "gfgUrl": "",
+    "videos": [
+      {
+        "id": "v_58_1",
+        "title": "DSA Patterns Course Announcement",
+        "ytId": "dQ4amKJuE7I",
+        "url": "https://www.youtube.com/watch?v=dQ4amKJuE7I"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_58_1",
+        "title": "Jump Game II",
+        "slug": "jump-game-ii",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/jump-game-ii/"
+      },
+      {
+        "id": "p_58_2",
+        "title": "Decode Ways",
+        "slug": "decode-ways",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/decode-ways/"
+      },
+      {
+        "id": "p_58_3",
+        "title": "Partition Labels",
+        "slug": "partition-labels",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/partition-labels/"
+      },
+      {
+        "id": "p_58_4",
+        "title": "Single Number II",
+        "slug": "single-number-ii",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/single-number-ii/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_59",
+    "title": "Placement Sprint — Core Patterns Capstone",
+    "category": "Placement Mocks",
+    "note": "Ship your RAG project to GitHub with a real README today. One AI project on a fresher resume stands out enormously.",
+    "gfgUrl": "",
+    "videos": [
+      {
+        "id": "v_59_1",
+        "title": "Case Study: 60hr Playlist to RAG",
+        "ytId": "Z9CI_OVhXNs",
+        "url": "https://www.youtube.com/watch?v=Z9CI_OVhXNs"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_59_1",
+        "title": "Merge Intervals",
+        "slug": "merge-intervals",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/merge-intervals/"
+      },
+      {
+        "id": "p_59_2",
+        "title": "Number of Islands",
+        "slug": "number-of-islands",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/number-of-islands/"
+      },
+      {
+        "id": "p_59_3",
+        "title": "Coin Change",
+        "slug": "coin-change",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/coin-change/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_60",
+    "title": "Placement Master Mock & Final Review",
+    "category": "Placement Mocks",
+    "note": "Day 1 problems, now in minutes instead of hours. That gap is your proof. Start applying today.",
+    "gfgUrl": "",
+    "videos": [
+      {
+        "id": "v_60_1",
+        "title": "How I Automated My Entire Job Search",
+        "ytId": "hSDo59FppOU",
+        "url": "https://www.youtube.com/watch?v=hSDo59FppOU"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_60_1",
+        "title": "Two Sum",
+        "slug": "two-sum",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/two-sum/"
+      },
+      {
+        "id": "p_60_2",
+        "title": "Longest Substring Without Repeating Characters",
+        "slug": "longest-substring-without-repeating-characters",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/"
+      },
+      {
+        "id": "p_60_3",
+        "title": "Course Schedule",
+        "slug": "course-schedule",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/course-schedule/"
+      },
+      {
+        "id": "p_60_4",
+        "title": "Maximum Subarray",
+        "slug": "maximum-subarray",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/maximum-subarray/"
+      }
+    ]
+  }
+]

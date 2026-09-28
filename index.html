@@ -1,0 +1,4821 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="DSA Mastery Tracker - Self-paced placement tracker featuring curated concept videos & 193 high-frequency LeetCode problems.">
+  <meta name="theme-color" content="#0b0f17">
+  <title>DSA Mastery Tracker | Self-Paced Placement Curriculum</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* -------------------------------------------------------------
+       CSS VARIABLES & THEME DEFINITIONS
+    ------------------------------------------------------------- */
+    :root {
+      --bg-body: #0b0f17;
+      --bg-surface: #121824;
+      --bg-surface-elevated: #182234;
+      --bg-surface-hover: #1f2d44;
+      --bg-surface-subtle: #151d2c;
+      --border-subtle: #202b3d;
+      --border-strong: #2e3e58;
+      --border-focus: #6366f1;
+
+      --text-primary: #f1f5f9;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
+      --text-inverse: #0b0f17;
+
+      --primary: #6366f1;
+      --primary-hover: #4f46e5;
+      --primary-soft: rgba(99, 102, 241, 0.15);
+      --primary-glow: rgba(99, 102, 241, 0.35);
+
+      --accent-cyan: #06b6d4;
+      --accent-cyan-soft: rgba(6, 182, 212, 0.15);
+
+      --easy: #10b981;
+      --easy-soft: rgba(16, 185, 129, 0.15);
+      --easy-border: rgba(16, 185, 129, 0.3);
+
+      --medium: #f59e0b;
+      --medium-soft: rgba(245, 158, 11, 0.15);
+      --medium-border: rgba(245, 158, 11, 0.3);
+
+      --hard: #ef4444;
+      --hard-soft: rgba(239, 68, 68, 0.15);
+      --hard-border: rgba(239, 68, 68, 0.3);
+
+      --done: #10b981;
+      --done-soft: rgba(16, 185, 129, 0.12);
+
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 14px;
+      --radius-xl: 18px;
+      --radius-full: 9999px;
+
+      --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+      --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.4);
+      --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.5);
+
+      --font-display: "Bricolage Grotesque", -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-body: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: "IBM Plex Mono", monospace;
+    }
+
+    [data-theme="light"] {
+      --bg-body: #f8fafc;
+      --bg-surface: #ffffff;
+      --bg-surface-elevated: #f1f5f9;
+      --bg-surface-hover: #e2e8f0;
+      --bg-surface-subtle: #f8fafc;
+      --border-subtle: #e2e8f0;
+      --border-strong: #cbd5e1;
+      --border-focus: #4f46e5;
+
+      --text-primary: #0f172a;
+      --text-secondary: #475569;
+      --text-muted: #64748b;
+      --text-inverse: #ffffff;
+
+      --primary: #4f46e5;
+      --primary-hover: #4338ca;
+      --primary-soft: rgba(79, 70, 229, 0.1);
+      --primary-glow: rgba(79, 70, 229, 0.25);
+
+      --accent-cyan: #0284c7;
+      --accent-cyan-soft: rgba(2, 132, 199, 0.1);
+
+      --easy: #059669;
+      --easy-soft: rgba(5, 150, 105, 0.12);
+      --easy-border: rgba(5, 150, 105, 0.3);
+
+      --medium: #d97706;
+      --medium-soft: rgba(217, 119, 6, 0.12);
+      --medium-border: rgba(217, 119, 6, 0.3);
+
+      --hard: #dc2626;
+      --hard-soft: rgba(220, 38, 38, 0.12);
+      --hard-border: rgba(220, 38, 38, 0.3);
+
+      --done: #059669;
+      --done-soft: rgba(5, 150, 105, 0.1);
+
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+      --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+      --shadow-lg: 0 12px 28px rgba(0, 0, 0, 0.1);
+    }
+
+    /* -------------------------------------------------------------
+       GLOBAL RESET & BASE
+    ------------------------------------------------------------- */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-primary);
+      font-family: var(--font-body);
+      font-size: 14px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button, input, textarea {
+      font-family: inherit;
+      font-size: inherit;
+      color: inherit;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 18px;
+    }
+
+    /* -------------------------------------------------------------
+       STICKY COMPACT HEADER
+    ------------------------------------------------------------- */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 15, 23, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-subtle);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    [data-theme="light"] .header {
+      background: rgba(255, 255, 255, 0.92);
+    }
+
+    .header-inner {
+      padding: 10px 0;
+    }
+
+    /* Top Navigation Bar */
+    .top-navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      min-height: 38px;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: nowrap;
+      min-width: 0;
+    }
+
+    .brand-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent-cyan);
+      background: var(--accent-cyan-soft);
+      padding: 2px 7px;
+      border-radius: var(--radius-full);
+      flex: none;
+    }
+
+    .brand-badge::before {
+      content: "";
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--accent-cyan);
+      box-shadow: 0 0 6px var(--accent-cyan);
+    }
+
+    h1.main-title {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(17px, 2.8vw, 22px);
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      background: linear-gradient(135deg, #ffffff 30%, #a5b4fc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      white-space: nowrap;
+      margin: 0;
+    }
+
+    [data-theme="light"] h1.main-title {
+      background: linear-gradient(135deg, #0f172a 30%, #4f46e5 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Header Compact Progress Pill */
+    .header-progress-pill {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-full);
+      padding: 4px 10px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-primary);
+      flex: none;
+    }
+
+    .pill-track {
+      width: 55px;
+      height: 6px;
+      background: var(--bg-surface-subtle);
+      border-radius: var(--radius-full);
+      overflow: hidden;
+      border: 1px solid var(--border-subtle);
+    }
+
+    .pill-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--primary), var(--accent-cyan), var(--done));
+      border-radius: var(--radius-full);
+      transition: width 0.35s ease;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex: none;
+    }
+
+    .icon-btn {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 6px 10px;
+      color: var(--text-secondary);
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: all 0.2s ease;
+      user-select: none;
+    }
+
+    .icon-btn:hover {
+      background: var(--bg-surface-elevated);
+      color: var(--text-primary);
+      border-color: var(--border-strong);
+    }
+
+    .icon-btn.active-toggle {
+      background: var(--primary-soft);
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .toggle-arrow {
+      transition: transform 0.25s ease;
+    }
+
+    .header.minimized .toggle-arrow {
+      transform: rotate(180deg);
+    }
+
+    /* -------------------------------------------------------------
+       COLLAPSIBLE UPPER PANEL (DRAWER)
+    ------------------------------------------------------------- */
+    .collapsible-panel {
+      max-height: 500px;
+      opacity: 1;
+      overflow: hidden;
+      transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease, margin 0.3s ease;
+      margin-top: 8px;
+    }
+
+    .header.minimized .collapsible-panel {
+      max-height: 0;
+      opacity: 0;
+      margin-top: 0;
+      pointer-events: none;
+    }
+
+    .main-subtitle {
+      color: var(--text-secondary);
+      font-size: 13px;
+      line-height: 1.4;
+      margin-bottom: 8px;
+    }
+
+    /* Progress Bar & Detailed Metrics */
+    .progress-meter {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .progress-track {
+      flex: 1;
+      height: 8px;
+      background: var(--bg-surface-subtle);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-full);
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #6366f1, #06b6d4, #10b981);
+      border-radius: var(--radius-full);
+      transition: width 0.4s ease;
+    }
+
+    .progress-percent {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-primary);
+      min-width: 44px;
+      text-align: right;
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .metric-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 7px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .metric-title {
+      font-size: 10.5px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .metric-title svg {
+      width: 13px;
+      height: 13px;
+      opacity: 0.7;
+    }
+
+    .metric-val {
+      font-family: var(--font-mono);
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-primary);
+      line-height: 1.2;
+    }
+
+    .metric-sub {
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      color: var(--text-secondary);
+    }
+
+    /* -------------------------------------------------------------
+       TOOLBAR CONTROLS (SEARCH & CHIPS)
+    ------------------------------------------------------------- */
+    .controls-wrapper {
+      margin-top: 6px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .search-row {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .search-box {
+      flex: 1;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 10px;
+      color: var(--text-muted);
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+    }
+
+    .search-input {
+      width: 100%;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 6px 12px 6px 32px;
+      color: var(--text-primary);
+      font-size: 13px;
+      transition: all 0.2s ease;
+    }
+
+    .search-input:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px var(--primary-soft);
+      background: var(--bg-surface-elevated);
+    }
+
+    .search-input::placeholder {
+      color: var(--text-muted);
+    }
+
+    .chips-container {
+      display: flex;
+      gap: 5px;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding-bottom: 2px;
+      scrollbar-width: thin;
+      scrollbar-color: var(--border-strong) transparent;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .chips-container::-webkit-scrollbar {
+      height: 4px;
+    }
+    .chips-container::-webkit-scrollbar-thumb {
+      background: var(--border-strong);
+      border-radius: 4px;
+    }
+
+    .chip {
+      font-size: 11.5px;
+      font-weight: 500;
+      padding: 3px 9px;
+      border-radius: var(--radius-full);
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.18s ease;
+      white-space: nowrap;
+      user-select: none;
+      flex: none;
+    }
+
+    .chip:hover {
+      background: var(--bg-surface-elevated);
+      color: var(--text-primary);
+      border-color: var(--border-strong);
+    }
+
+    .chip.active {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    .chip-counter {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      opacity: 0.85;
+      background: rgba(0, 0, 0, 0.25);
+      padding: 1px 4px;
+      border-radius: 99px;
+    }
+
+    .active .chip-counter {
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    .btn-toggle-all {
+      font-size: 11.5px;
+      color: var(--text-secondary);
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 5px 9px;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+      flex: none;
+    }
+
+    .btn-toggle-all:hover {
+      background: var(--bg-surface-elevated);
+      color: var(--text-primary);
+      border-color: var(--border-strong);
+    }
+
+    /* -------------------------------------------------------------
+       MAIN CONTENT / TOPIC ACCORDIONS
+    ------------------------------------------------------------- */
+    .main-content {
+      flex: 1;
+      padding: 18px 0 60px;
+    }
+
+    .module-group {
+      margin-bottom: 24px;
+    }
+
+    .module-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .module-badge {
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--primary);
+      background: var(--primary-soft);
+      padding: 2px 8px;
+      border-radius: var(--radius-full);
+    }
+
+    .module-title {
+      font-family: var(--font-display);
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+    }
+
+    .module-stats {
+      margin-left: auto;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    /* ACCORDION CARD */
+    .topic-accordion {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      margin-bottom: 8px;
+      overflow: hidden;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .topic-accordion:hover {
+      border-color: var(--border-strong);
+    }
+
+    .topic-accordion.completed {
+      border-color: rgba(16, 185, 129, 0.35);
+      background: linear-gradient(180deg, rgba(16, 185, 129, 0.03) 0%, var(--bg-surface) 100%);
+    }
+
+    .topic-accordion[open] {
+      box-shadow: var(--shadow-md);
+      border-color: var(--border-strong);
+    }
+
+    .topic-summary {
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 11px 14px;
+      user-select: none;
+      transition: background-color 0.15s ease;
+    }
+
+    .topic-summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .topic-summary:hover {
+      background: var(--bg-surface-elevated);
+    }
+
+    .topic-num {
+      flex: none;
+      width: 34px;
+      height: 34px;
+      border-radius: var(--radius-md);
+      background: var(--bg-surface-subtle);
+      border: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--text-muted);
+      transition: all 0.2s ease;
+    }
+
+    .topic-accordion.completed .topic-num {
+      background: var(--done);
+      border-color: var(--done);
+      color: #ffffff;
+      box-shadow: 0 0 10px rgba(16, 185, 129, 0.4);
+    }
+
+    .topic-info {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .topic-title-row {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .topic-name {
+      font-size: 14.5px;
+      font-weight: 600;
+      color: var(--text-primary);
+      overflow-wrap: anywhere;
+    }
+
+    .topic-accordion.completed .topic-name {
+      color: var(--text-secondary);
+    }
+
+    .topic-meta-line {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .topic-mini-bar {
+      width: 40px;
+      height: 4px;
+      background: var(--bg-surface-subtle);
+      border-radius: var(--radius-full);
+      overflow: hidden;
+      display: inline-block;
+      border: 1px solid var(--border-subtle);
+    }
+
+    .topic-mini-bar-fill {
+      height: 100%;
+      width: 0%;
+      background: var(--primary);
+      transition: width 0.3s ease;
+    }
+
+    .topic-accordion.completed .topic-mini-bar-fill {
+      background: var(--done);
+    }
+
+    .chevron-icon {
+      flex: none;
+      color: var(--text-muted);
+      transition: transform 0.2s ease;
+      display: flex;
+      align-items: center;
+    }
+
+    .topic-accordion[open] .chevron-icon {
+      transform: rotate(90deg);
+      color: var(--primary);
+    }
+
+    /* ACCORDION CONTENT BODY */
+    .topic-body {
+      padding: 6px 14px 14px;
+      border-top: 1px solid var(--border-subtle);
+      background: var(--bg-surface-subtle);
+    }
+
+    .sub-section-title {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin: 12px 0 6px;
+    }
+
+    .sub-section-title svg {
+      width: 13px;
+      height: 13px;
+      color: var(--primary);
+    }
+
+    .item-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .item-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 7px 12px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .item-row:hover {
+      background: var(--bg-surface-elevated);
+      border-color: var(--border-strong);
+      transform: translateY(-1px);
+    }
+
+    /* Modern Custom Rounded Checkbox */
+    .item-checkbox {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      flex: none;
+      width: 19px;
+      height: 19px;
+      border-radius: 6px;
+      background: var(--bg-surface-subtle);
+      border: 1.5px solid var(--border-strong);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      position: relative;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      outline: none;
+    }
+
+    .item-checkbox:hover {
+      border-color: var(--primary);
+      background: var(--bg-surface-hover);
+      box-shadow: 0 0 8px var(--primary-soft);
+    }
+
+    .item-checkbox:focus-visible {
+      box-shadow: 0 0 0 3px var(--primary-soft);
+      border-color: var(--primary);
+    }
+
+    .item-checkbox:checked {
+      background: var(--done);
+      border-color: var(--done);
+      box-shadow: 0 2px 8px rgba(16, 185, 129, 0.35);
+    }
+
+    .item-checkbox::after {
+      content: "";
+      width: 5px;
+      height: 9px;
+      border: solid #ffffff;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg) scale(0);
+      transition: transform 0.18s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: absolute;
+      top: 2px;
+      opacity: 0;
+    }
+
+    .item-checkbox:checked::after {
+      transform: rotate(45deg) scale(1);
+      opacity: 1;
+    }
+
+    .item-link {
+      flex: 1;
+      min-width: 0;
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text-primary);
+      overflow-wrap: anywhere;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.15s ease;
+    }
+
+    .item-row:hover .item-link {
+      color: var(--primary);
+    }
+
+    .item-row.is-done {
+      background: var(--done-soft);
+      border-color: rgba(16, 185, 129, 0.22);
+    }
+
+    .item-row.is-done .item-link {
+      color: var(--text-muted);
+      text-decoration: line-through;
+      text-decoration-color: var(--border-strong);
+    }
+
+    /* DIFFICULTY BADGES */
+    .diff-badge {
+      flex: none;
+      font-family: var(--font-mono);
+      font-size: 9.5px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 2px 6px;
+      border-radius: var(--radius-sm);
+      border: 1px solid transparent;
+    }
+
+    .diff-badge.E, .diff-badge.Easy {
+      background: var(--easy-soft);
+      color: var(--easy);
+      border-color: var(--easy-border);
+    }
+
+    .diff-badge.M, .diff-badge.Medium {
+      background: var(--medium-soft);
+      color: var(--medium);
+      border-color: var(--medium-border);
+    }
+
+    .diff-badge.H, .diff-badge.Hard {
+      background: var(--hard-soft);
+      color: var(--hard);
+      border-color: var(--hard-border);
+    }
+
+    .action-icon-link {
+      flex: none;
+      color: var(--text-muted);
+      padding: 3px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.15s ease;
+    }
+
+    .action-icon-link:hover {
+      color: var(--text-primary);
+      background: var(--bg-surface-elevated);
+    }
+
+    .action-icon-link.yt:hover {
+      color: #ff0033;
+    }
+
+    .action-icon-link.lc:hover {
+      color: #ffa116;
+    }
+
+    /* TOPIC NOTE / TAKEAWAY */
+    .topic-note-box {
+      margin-top: 12px;
+      padding: 9px 12px;
+      background: var(--primary-soft);
+      border-left: 3px solid var(--primary);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      font-size: 12.5px;
+      line-height: 1.5;
+      color: var(--text-primary);
+    }
+
+    .topic-note-header {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 2px;
+    }
+
+    .theory-link-box {
+      margin-top: 8px;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: var(--text-secondary);
+    }
+
+    .theory-link-box a {
+      color: var(--accent-cyan);
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+    }
+
+    .theory-link-box a:hover {
+      text-decoration: underline;
+    }
+
+    /* -------------------------------------------------------------
+       FOOTER CONTROLS & SYNC
+    ------------------------------------------------------------- */
+    .footer-section {
+      margin-top: auto;
+      background: var(--bg-surface);
+      border-top: 1px solid var(--border-subtle);
+      padding: 24px 0 34px;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .footer-heading {
+      font-family: var(--font-display);
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .footer-desc {
+      color: var(--text-secondary);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .sync-actions-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .btn-sync {
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-md);
+      padding: 7px 14px;
+      font-size: 12.5px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-primary);
+      transition: all 0.2s ease;
+    }
+
+    .btn-sync:hover {
+      background: var(--bg-surface-hover);
+      border-color: var(--primary);
+    }
+
+    .btn-sync.btn-danger {
+      color: var(--hard);
+      border-color: var(--hard-border);
+    }
+
+    .btn-sync.btn-danger:hover {
+      background: var(--hard-soft);
+      border-color: var(--hard);
+    }
+
+    .backup-textarea {
+      width: 100%;
+      min-height: 65px;
+      background: var(--bg-surface-subtle);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 8px 12px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--text-primary);
+      resize: vertical;
+      line-height: 1.4;
+    }
+
+    .backup-textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+
+    .footer-credits {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border-subtle);
+      font-size: 11.5px;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+    }
+
+    /* -------------------------------------------------------------
+       MODAL & TOAST COMPONENT
+    ------------------------------------------------------------- */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(4px);
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-xl);
+      padding: 22px;
+      max-width: 420px;
+      width: 100%;
+      box-shadow: var(--shadow-lg);
+      transform: scale(0.95);
+      transition: transform 0.2s ease;
+    }
+
+    .modal-overlay.active .modal-card {
+      transform: scale(1);
+    }
+
+    .modal-title {
+      font-family: var(--font-display);
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+    }
+
+    .modal-text {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      margin-bottom: 18px;
+    }
+
+    .modal-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    .btn-modal {
+      padding: 7px 14px;
+      border-radius: var(--radius-md);
+      font-size: 12.5px;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-surface-elevated);
+      color: var(--text-primary);
+      transition: all 0.2s ease;
+    }
+
+    .btn-modal:hover {
+      background: var(--bg-surface-hover);
+    }
+
+    .btn-modal.btn-modal-danger {
+      background: var(--hard);
+      border-color: var(--hard);
+      color: #ffffff;
+    }
+
+    .btn-modal.btn-modal-danger:hover {
+      background: #dc2626;
+    }
+
+    /* TOAST */
+    .toast-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 300;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      pointer-events: none;
+    }
+
+    .toast {
+      background: var(--bg-surface-elevated);
+      color: var(--text-primary);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-md);
+      padding: 8px 14px;
+      font-size: 12.5px;
+      font-weight: 500;
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      transform: translateY(10px);
+      opacity: 0;
+      transition: all 0.25s ease;
+      pointer-events: auto;
+    }
+
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* EMPTY STATE */
+    .empty-state {
+      text-align: center;
+      padding: 40px 20px;
+      color: var(--text-muted);
+    }
+
+    .empty-state svg {
+      width: 42px;
+      height: 42px;
+      margin-bottom: 10px;
+      opacity: 0.5;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 640px) {
+      .metric-grid {
+        grid-template-columns: 1fr;
+      }
+      .top-navbar {
+        flex-wrap: wrap;
+      }
+      .brand-group {
+        width: 100%;
+        justify-content: space-between;
+      }
+      .header-progress-pill {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="mainHeader">
+    <div class="container">
+      <div class="header-inner">
+        
+        <!-- Top Navigation Bar -->
+        <div class="top-navbar">
+          <div class="brand-group">
+            <span class="brand-badge">DSA Tracker</span>
+            <h1 class="main-title">DSA Mastery Tracker</h1>
+          </div>
+
+          <!-- Mini Progress Pill -->
+          <div class="header-progress-pill" title="Overall Completed Items">
+            <span class="pill-track"><i class="pill-fill" id="pillFill"></i></span>
+            <span id="pillText">0% · 0/324</span>
+          </div>
+
+          <div class="header-actions">
+            <!-- Minimize / Expand Toggle Button -->
+            <button class="icon-btn" id="headerToggleBtn" type="button" title="Toggle Upper Panel Size">
+              <svg class="toggle-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+              <span id="headerToggleLabel">Minimize</span>
+            </button>
+
+            <!-- Theme Toggle Button -->
+            <button class="icon-btn" id="themeToggle" type="button" title="Toggle Theme" aria-label="Toggle Theme">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+              <span id="themeLabel">Light</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Collapsible Upper Panel -->
+        <div class="collapsible-panel" id="collapsiblePanel">
+          <p class="main-subtitle">Self-paced placement tracker featuring curated concept videos & 193 high-frequency LeetCode problems.</p>
+
+          <!-- Large Progress Meter -->
+          <div class="progress-meter">
+            <div class="progress-track">
+              <div class="progress-fill" id="overallProgressBar"></div>
+            </div>
+            <div class="progress-percent" id="overallPercentText">0%</div>
+          </div>
+
+          <!-- Metric Cards -->
+          <div class="metric-grid">
+            <div class="metric-card">
+              <div class="metric-title">
+                <span>Videos Watched</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+              </div>
+              <div class="metric-val" id="metricVideos">0<span style="font-size:11px;color:var(--text-muted)">/131</span></div>
+              <div class="metric-sub" id="metricVideosSub">0% complete</div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-title">
+                <span>Problems Solved</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6"></path><path d="M8 6l-6 6 6 6"></path></svg>
+              </div>
+              <div class="metric-val" id="metricProblems">0<span style="font-size:11px;color:var(--text-muted)">/193</span></div>
+              <div class="metric-sub" id="metricProblemsSub">0 E · 0 M · 0 H</div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-title">
+                <span>Total Completed</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              </div>
+              <div class="metric-val" id="metricTotal">0<span style="font-size:11px;color:var(--text-muted)">/324</span></div>
+              <div class="metric-sub" id="metricTotalSub">Overall Mastery</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sticky Filter & Search Row -->
+        <div class="controls-wrapper">
+          <div class="search-row">
+            <div class="search-box">
+              <span class="search-icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              </span>
+              <input type="text" id="searchInput" class="search-input" placeholder="Search topics, videos, or LeetCode questions...">
+            </div>
+            <button class="btn-toggle-all" id="btnToggleAll" type="button">Expand All</button>
+            <button class="chip" id="hideDoneChip" type="button" aria-pressed="false">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+              Hide Done
+            </button>
+          </div>
+
+          <div class="chips-container" id="categoryChips">
+            <button class="chip active" type="button" data-cat="all">All Modules <span class="chip-counter" id="chipAllCount">60</span></button>
+            <button class="chip" type="button" data-cat="Foundations">Foundations</button>
+            <button class="chip" type="button" data-cat="Arrays & Hashing">Arrays & Hashing</button>
+            <button class="chip" type="button" data-cat="Two Pointers & Sliding Window">Two Pointers & Sliding Window</button>
+            <button class="chip" type="button" data-cat="Linked Lists">Linked Lists</button>
+            <button class="chip" type="button" data-cat="Stacks & Queues">Stacks & Queues</button>
+            <button class="chip" type="button" data-cat="Binary Search">Binary Search</button>
+            <button class="chip" type="button" data-cat="Heaps & Priority Queues">Heaps</button>
+            <button class="chip" type="button" data-cat="Recursion & Backtracking">Recursion & Backtracking</button>
+            <button class="chip" type="button" data-cat="Trees & BST">Trees & BST</button>
+            <button class="chip" type="button" data-cat="Graphs">Graphs</button>
+            <button class="chip" type="button" data-cat="Dynamic Programming">DP</button>
+            <button class="chip" type="button" data-cat="Greedy & Bit Manipulation">Greedy & Bit</button>
+            <button class="chip" type="button" data-cat="Placement Mocks">Placement Mocks</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN LIST -->
+  <main class="main-content">
+    <div class="container" id="modulesContainer">
+      <!-- Injected via JavaScript -->
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer-section">
+    <div class="container">
+      <div class="footer-inner">
+        <h3 class="footer-heading">Data Management & Multi-Device Sync</h3>
+        <p class="footer-desc">
+          Your progress is automatically saved to your browser's <code>localStorage</code> in real-time. Use the export/import controls below to backup your data or transfer your progress seamlessly to another computer, tablet, or mobile phone.
+        </p>
+
+        <div class="sync-actions-row">
+          <button class="btn-sync" id="btnExportJson" type="button">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            Export JSON
+          </button>
+          
+          <button class="btn-sync" id="btnImportJson" type="button">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+            Import JSON
+          </button>
+
+          <button class="btn-sync btn-danger" id="btnResetAll" type="button">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+            Reset All Data
+          </button>
+        </div>
+
+        <textarea id="syncCodeArea" class="backup-textarea" spellcheck="false" placeholder="JSON backup code will appear here upon export, or paste your JSON backup code here and click 'Import JSON'..."></textarea>
+
+        <div class="footer-credits">
+          <span>Curriculum: 60 Topic Modules · 131 Concept Videos · 193 High-Frequency LeetCode Problems</span>
+          <span>Self-Paced · Zero Ads · 100% DSA Focused</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- RESET CONFIRMATION MODAL -->
+  <div class="modal-overlay" id="resetModal">
+    <div class="modal-card">
+      <h4 class="modal-title">Reset All Progress?</h4>
+      <p class="modal-text">
+        This action will erase all checked videos, solved LeetCode questions, and localStorage metrics permanently. This cannot be undone unless you have a JSON backup code.
+      </p>
+      <div class="modal-actions">
+        <button class="btn-modal" id="cancelResetBtn" type="button">Cancel</button>
+        <button class="btn-modal btn-modal-danger" id="confirmResetBtn" type="button">Reset Everything</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- EMBEDDED CURRICULUM DATA & APPLICATION LOGIC -->
+  <script>
+    const CURRICULUM = [
+  {
+    "topicId": "topic_1",
+    "title": "Setup & First Program",
+    "category": "Foundations",
+    "note": "Pick ONE language and stick to it for 60 days. Install compiler/IDE, make a LeetCode account today.",
+    "gfgUrl": "https://www.geeksforgeeks.org/cpp/c-plus-plus/",
+    "videos": [
+      {
+        "id": "v_1_1",
+        "title": "The Best Way To Learn DSA in 2025",
+        "ytId": "qH2VQY48mg4",
+        "url": "https://www.youtube.com/watch?v=qH2VQY48mg4"
+      },
+      {
+        "id": "v_1_2",
+        "title": "DSA Patterns Roadmap 2025",
+        "ytId": "S8tpzqrwnHk",
+        "url": "https://www.youtube.com/watch?v=S8tpzqrwnHk"
+      },
+      {
+        "id": "v_1_3",
+        "title": "DSA Basics Day 1 — C++ / Java / Python",
+        "ytId": "mjuMIHHbkT8",
+        "url": "https://www.youtube.com/watch?v=mjuMIHHbkT8"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_1_1",
+        "title": "Concatenation of Array",
+        "slug": "concatenation-of-array",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/concatenation-of-array/"
+      },
+      {
+        "id": "p_1_2",
+        "title": "Running Sum of 1d Array",
+        "slug": "running-sum-of-1d-array",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/running-sum-of-1d-array/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_2",
+    "title": "If-Else, Loops, Conditionals",
+    "category": "Foundations",
+    "note": "Loops are 90% of DSA. Dry-run every loop on paper before you run the code.",
+    "gfgUrl": "https://www.geeksforgeeks.org/cpp/c-plus-plus/",
+    "videos": [
+      {
+        "id": "v_2_1",
+        "title": "DSA Basics Day 2 — IF-ELSE & Loops",
+        "ytId": "1bXdrfP5vwA",
+        "url": "https://www.youtube.com/watch?v=1bXdrfP5vwA"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_2_1",
+        "title": "FizzBuzz",
+        "slug": "fizz-buzz",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/fizz-buzz/"
+      },
+      {
+        "id": "p_2_2",
+        "title": "Number of Steps to Reduce a Number to Zero",
+        "slug": "number-of-steps-to-reduce-a-number-to-zero",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/"
+      },
+      {
+        "id": "p_2_3",
+        "title": "Richest Customer Wealth",
+        "slug": "richest-customer-wealth",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/richest-customer-wealth/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_3",
+    "title": "Functions, Arrays & Linked List Intro",
+    "category": "Foundations",
+    "note": "Don't worry if Linked List feels abstract — we return to it properly on Day 17.",
+    "gfgUrl": "https://www.geeksforgeeks.org/cpp/c-plus-plus/",
+    "videos": [
+      {
+        "id": "v_3_1",
+        "title": "DSA Basics Day 3 — Functions",
+        "ytId": "pPOjiA1NEPw",
+        "url": "https://www.youtube.com/watch?v=pPOjiA1NEPw"
+      },
+      {
+        "id": "v_3_2",
+        "title": "DSA Basics Day 4 — Arrays & Linked List",
+        "ytId": "jk_A6Aue98I",
+        "url": "https://www.youtube.com/watch?v=jk_A6Aue98I"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_3_1",
+        "title": "Remove Element",
+        "slug": "remove-element",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/remove-element/"
+      },
+      {
+        "id": "p_3_2",
+        "title": "Merge Sorted Array",
+        "slug": "merge-sorted-array",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/merge-sorted-array/"
+      },
+      {
+        "id": "p_3_3",
+        "title": "Middle of the Linked List",
+        "slug": "middle-of-the-linked-list",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/middle-of-the-linked-list/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_4",
+    "title": "Time & Space Complexity",
+    "category": "Foundations",
+    "note": "THE most important day of week 1. For every problem today write both the brute-force and optimal complexity in a notebook.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/asymptotic-notation-and-analysis-based-on-input-size-of-algorithms/",
+    "videos": [
+      {
+        "id": "v_4_1",
+        "title": "Master Time Complexity in 30 Minutes",
+        "ytId": "oFwHwCkSoGw",
+        "url": "https://www.youtube.com/watch?v=oFwHwCkSoGw"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_4_1",
+        "title": "Two Sum (solve brute force first)",
+        "slug": "two-sum",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/two-sum/"
+      },
+      {
+        "id": "p_4_2",
+        "title": "Contains Duplicate",
+        "slug": "contains-duplicate",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/contains-duplicate/"
+      },
+      {
+        "id": "p_4_3",
+        "title": "Majority Element",
+        "slug": "majority-element",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/majority-element/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_5",
+    "title": "Hashmaps & Sets",
+    "category": "Arrays & Hashing",
+    "note": "Hashmap turns O(n^2) into O(n) more often than any other tool. Learn it before patterns.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/hashing-data-structure/",
+    "videos": [
+      {
+        "id": "v_5_1",
+        "title": "The Only Video You Need To Master HASHMAPS",
+        "ytId": "9a4A6CbrLCo",
+        "url": "https://www.youtube.com/watch?v=9a4A6CbrLCo"
+      },
+      {
+        "id": "v_5_2",
+        "title": "4 Questions to Master Hashmaps",
+        "ytId": "ICggOtnixBk",
+        "url": "https://www.youtube.com/watch?v=ICggOtnixBk"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_5_1",
+        "title": "Two Sum (now in O(n))",
+        "slug": "two-sum",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/two-sum/"
+      },
+      {
+        "id": "p_5_2",
+        "title": "Valid Anagram",
+        "slug": "valid-anagram",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/valid-anagram/"
+      },
+      {
+        "id": "p_5_3",
+        "title": "Group Anagrams",
+        "slug": "group-anagrams",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/group-anagrams/"
+      },
+      {
+        "id": "p_5_4",
+        "title": "Top K Frequent Elements",
+        "slug": "top-k-frequent-elements",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/top-k-frequent-elements/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_6",
+    "title": "Two Pointers — Introduction",
+    "category": "Two Pointers & Sliding Window",
+    "note": "Opposite-end pointers vs same-direction pointers — know which signal picks which.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/two-pointers-technique/",
+    "videos": [
+      {
+        "id": "v_6_1",
+        "title": "Master DSA Patterns with 2 Pointers",
+        "ytId": "Fu7LD_mIo00",
+        "url": "https://www.youtube.com/watch?v=Fu7LD_mIo00"
+      },
+      {
+        "id": "v_6_2",
+        "title": "2 Pointer Technique — Part 2",
+        "ytId": "PvyEr3CeKzE",
+        "url": "https://www.youtube.com/watch?v=PvyEr3CeKzE"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_6_1",
+        "title": "Two Sum II — Input Array Is Sorted",
+        "slug": "two-sum-ii-input-array-is-sorted",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/"
+      },
+      {
+        "id": "p_6_2",
+        "title": "Valid Palindrome",
+        "slug": "valid-palindrome",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/valid-palindrome/"
+      },
+      {
+        "id": "p_6_3",
+        "title": "Move Zeroes",
+        "slug": "move-zeroes",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/move-zeroes/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_7",
+    "title": "Two Pointers — Interview Questions",
+    "category": "Two Pointers & Sliding Window",
+    "note": "3Sum is asked in real interviews constantly. Do it twice today.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/two-pointers-technique/",
+    "videos": [
+      {
+        "id": "v_7_1",
+        "title": "2 Pointer DSA Pattern — Part 3",
+        "ytId": "nPdxCoVHC90",
+        "url": "https://www.youtube.com/watch?v=nPdxCoVHC90"
+      },
+      {
+        "id": "v_7_2",
+        "title": "Two Pointers: More Interview Questions",
+        "ytId": "rM9EthMlXnw",
+        "url": "https://www.youtube.com/watch?v=rM9EthMlXnw"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_7_1",
+        "title": "3Sum",
+        "slug": "3sum",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/3sum/"
+      },
+      {
+        "id": "p_7_2",
+        "title": "Container With Most Water",
+        "slug": "container-with-most-water",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/container-with-most-water/"
+      },
+      {
+        "id": "p_7_3",
+        "title": "Remove Duplicates from Sorted Array",
+        "slug": "remove-duplicates-from-sorted-array",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/remove-duplicates-from-sorted-array/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_8",
+    "title": "Two Pointers — Hard + Revision",
+    "category": "Two Pointers & Sliding Window",
+    "note": "Trapping Rain Water is hard — attempt for 30 min, then watch the solution. That's not cheating.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/two-pointers-technique/",
+    "videos": [
+      {
+        "id": "v_8_1",
+        "title": "Two Pointers: Most Important Questions",
+        "ytId": "ljJJcYql6Bc",
+        "url": "https://www.youtube.com/watch?v=ljJJcYql6Bc"
+      },
+      {
+        "id": "v_8_2",
+        "title": "Two Pointers: Complete Revision",
+        "ytId": "n7v0SokbF4I",
+        "url": "https://www.youtube.com/watch?v=n7v0SokbF4I"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_8_1",
+        "title": "Sort Colors",
+        "slug": "sort-colors",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/sort-colors/"
+      },
+      {
+        "id": "p_8_2",
+        "title": "4Sum",
+        "slug": "4sum",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/4sum/"
+      },
+      {
+        "id": "p_8_3",
+        "title": "Trapping Rain Water",
+        "slug": "trapping-rain-water",
+        "diff": "H",
+        "url": "https://leetcode.com/problems/trapping-rain-water/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_9",
+    "title": "Sliding Window — Fixed Size",
+    "category": "Two Pointers & Sliding Window",
+    "note": "Fixed window = window size given. Variable window = window size is the answer. Spot the difference.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/window-sliding-technique/",
+    "videos": [
+      {
+        "id": "v_9_1",
+        "title": "Introduction to Sliding Window",
+        "ytId": "V6pRTnOZ7Mc",
+        "url": "https://www.youtube.com/watch?v=V6pRTnOZ7Mc"
+      },
+      {
+        "id": "v_9_2",
+        "title": "Sliding Window: Easy & Medium Questions",
+        "ytId": "DL8LSXUsfWE",
+        "url": "https://www.youtube.com/watch?v=DL8LSXUsfWE"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_9_1",
+        "title": "Maximum Average Subarray I",
+        "slug": "maximum-average-subarray-i",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/maximum-average-subarray-i/"
+      },
+      {
+        "id": "p_9_2",
+        "title": "Best Time to Buy and Sell Stock",
+        "slug": "best-time-to-buy-and-sell-stock",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/"
+      },
+      {
+        "id": "p_9_3",
+        "title": "Longest Substring Without Repeating Characters",
+        "slug": "longest-substring-without-repeating-characters",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_10",
+    "title": "Sliding Window — Variable Size",
+    "category": "Two Pointers & Sliding Window",
+    "note": "Template: expand right, shrink left while invalid, record answer. Memorise the shape, not the code.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/window-sliding-technique/",
+    "videos": [
+      {
+        "id": "v_10_1",
+        "title": "Sliding Window: Core Interview Questions",
+        "ytId": "v4pIgiBQMh8",
+        "url": "https://www.youtube.com/watch?v=v4pIgiBQMh8"
+      },
+      {
+        "id": "v_10_2",
+        "title": "Sliding Window: Important Questions",
+        "ytId": "2HZ12B2ZPAQ",
+        "url": "https://www.youtube.com/watch?v=2HZ12B2ZPAQ"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_10_1",
+        "title": "Longest Repeating Character Replacement",
+        "slug": "longest-repeating-character-replacement",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/longest-repeating-character-replacement/"
+      },
+      {
+        "id": "p_10_2",
+        "title": "Permutation in String",
+        "slug": "permutation-in-string",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/permutation-in-string/"
+      },
+      {
+        "id": "p_10_3",
+        "title": "Max Consecutive Ones III",
+        "slug": "max-consecutive-ones-iii",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/max-consecutive-ones-iii/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_11",
+    "title": "Sliding Window — Revision",
+    "category": "Two Pointers & Sliding Window",
+    "note": "Re-solve Day 9's problems from scratch without looking. If you can't, redo Day 9.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/window-sliding-technique/",
+    "videos": [
+      {
+        "id": "v_11_1",
+        "title": "Sliding Window Revision (Part 1)",
+        "ytId": "lyZp-49pdzQ",
+        "url": "https://www.youtube.com/watch?v=lyZp-49pdzQ"
+      },
+      {
+        "id": "v_11_2",
+        "title": "Sliding Window Revision (Part 2)",
+        "ytId": "IR3oL6ltbJ8",
+        "url": "https://www.youtube.com/watch?v=IR3oL6ltbJ8"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_11_1",
+        "title": "Fruit Into Baskets",
+        "slug": "fruit-into-baskets",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/fruit-into-baskets/"
+      },
+      {
+        "id": "p_11_2",
+        "title": "Minimum Size Subarray Sum",
+        "slug": "minimum-size-subarray-sum",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/minimum-size-subarray-sum/"
+      },
+      {
+        "id": "p_11_3",
+        "title": "Subarray Product Less Than K",
+        "slug": "subarray-product-less-than-k",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/subarray-product-less-than-k/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_12",
+    "title": "Sliding Window — FAANG Level",
+    "category": "Two Pointers & Sliding Window",
+    "note": "Minimum Window Substring appears in Amazon and Google loops. Know it cold.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/window-sliding-technique/",
+    "videos": [
+      {
+        "id": "v_12_1",
+        "title": "Sliding Window: Amazon Interview Question",
+        "ytId": "9wc8HZH_sh4",
+        "url": "https://www.youtube.com/watch?v=9wc8HZH_sh4"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_12_1",
+        "title": "Minimum Window Substring",
+        "slug": "minimum-window-substring",
+        "diff": "H",
+        "url": "https://leetcode.com/problems/minimum-window-substring/"
+      },
+      {
+        "id": "p_12_2",
+        "title": "Sliding Window Maximum",
+        "slug": "sliding-window-maximum",
+        "diff": "H",
+        "url": "https://leetcode.com/problems/sliding-window-maximum/"
+      },
+      {
+        "id": "p_12_3",
+        "title": "Count Number of Nice Subarrays",
+        "slug": "count-number-of-nice-subarrays",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/count-number-of-nice-subarrays/"
+      },
+      {
+        "id": "p_12_add_next-permutation",
+        "title": "Next Permutation",
+        "slug": "next-permutation",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/next-permutation/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_13",
+    "title": "Prefix Sum — Introduction",
+    "category": "Arrays & Hashing",
+    "note": "Prefix sum + hashmap is a combo. Subarray Sum Equals K is where the two meet.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/prefix-sum-array-implementation-applications-competitive-programming/",
+    "videos": [
+      {
+        "id": "v_13_1",
+        "title": "Prefix Sum Pattern Introduction",
+        "ytId": "F86WfZ5RUC8",
+        "url": "https://www.youtube.com/watch?v=F86WfZ5RUC8"
+      },
+      {
+        "id": "v_13_2",
+        "title": "Master DSA Patterns With Prefix Sum",
+        "ytId": "XLtRoHIDGs0",
+        "url": "https://www.youtube.com/watch?v=XLtRoHIDGs0"
+      },
+      {
+        "id": "v_13_3",
+        "title": "Prefix Sum: Interview Questions",
+        "ytId": "sh0Ng7sjscE",
+        "url": "https://www.youtube.com/watch?v=sh0Ng7sjscE"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_13_1",
+        "title": "Range Sum Query — Immutable",
+        "slug": "range-sum-query-immutable",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/range-sum-query-immutable/"
+      },
+      {
+        "id": "p_13_2",
+        "title": "Find Pivot Index",
+        "slug": "find-pivot-index",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/find-pivot-index/"
+      },
+      {
+        "id": "p_13_3",
+        "title": "Subarray Sum Equals K",
+        "slug": "subarray-sum-equals-k",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/subarray-sum-equals-k/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_14",
+    "title": "Prefix Sum — Advanced",
+    "category": "Arrays & Hashing",
+    "note": "Product of Array Except Self is prefix/suffix thinking — no division allowed.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/prefix-sum-array-implementation-applications-competitive-programming/",
+    "videos": [
+      {
+        "id": "v_14_1",
+        "title": "Prefix Sum Hacks for Amazon Interviews",
+        "ytId": "EYpv5sypVdE",
+        "url": "https://www.youtube.com/watch?v=EYpv5sypVdE"
+      },
+      {
+        "id": "v_14_2",
+        "title": "Master Prefix Sum in 10 Minutes",
+        "ytId": "oZnLzJCOdPA",
+        "url": "https://www.youtube.com/watch?v=oZnLzJCOdPA"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_14_1",
+        "title": "Product of Array Except Self",
+        "slug": "product-of-array-except-self",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/product-of-array-except-self/"
+      },
+      {
+        "id": "p_14_2",
+        "title": "Contiguous Array",
+        "slug": "contiguous-array",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/contiguous-array/"
+      },
+      {
+        "id": "p_14_3",
+        "title": "Continuous Subarray Sum",
+        "slug": "continuous-subarray-sum",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/continuous-subarray-sum/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_15",
+    "title": "Kadane's Algorithm",
+    "category": "Arrays & Hashing",
+    "note": "Kadane is your first taste of DP thinking. Notice the 'carry forward or restart' decision.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/largest-sum-contiguous-subarray/",
+    "videos": [
+      {
+        "id": "v_15_1",
+        "title": "Kadane's Algorithm: Intro & Intuition",
+        "ytId": "N8vJ8RyQEes",
+        "url": "https://www.youtube.com/watch?v=N8vJ8RyQEes"
+      },
+      {
+        "id": "v_15_2",
+        "title": "Kadane's: Most Important Interview Question",
+        "ytId": "JUV-Hdtuzsw",
+        "url": "https://www.youtube.com/watch?v=JUV-Hdtuzsw"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_15_1",
+        "title": "Maximum Subarray",
+        "slug": "maximum-subarray",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/maximum-subarray/"
+      },
+      {
+        "id": "p_15_2",
+        "title": "Maximum Product Subarray",
+        "slug": "maximum-product-subarray",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/maximum-product-subarray/"
+      },
+      {
+        "id": "p_15_3",
+        "title": "Maximum Sum Circular Subarray",
+        "slug": "maximum-sum-circular-subarray",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/maximum-sum-circular-subarray/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_16",
+    "title": "Kadane — Variants",
+    "category": "Arrays & Hashing",
+    "note": "One-deletion variant = two Kadanes running together. Draw both arrays out.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/largest-sum-contiguous-subarray/",
+    "videos": [
+      {
+        "id": "v_16_1",
+        "title": "Kadane's Algorithm: Quick Revision",
+        "ytId": "Bt9rgQgGf64",
+        "url": "https://www.youtube.com/watch?v=Bt9rgQgGf64"
+      },
+      {
+        "id": "v_16_2",
+        "title": "Kadane With One Deletion",
+        "ytId": "jIz4zcFuUU8",
+        "url": "https://www.youtube.com/watch?v=jIz4zcFuUU8"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_16_1",
+        "title": "Maximum Subarray Sum with One Deletion",
+        "slug": "maximum-subarray-sum-with-one-deletion",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/maximum-subarray-sum-with-one-deletion/"
+      },
+      {
+        "id": "p_16_2",
+        "title": "Best Time to Buy and Sell Stock II",
+        "slug": "best-time-to-buy-and-sell-stock-ii",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/"
+      },
+      {
+        "id": "p_16_3",
+        "title": "K-Concatenation Maximum Sum",
+        "slug": "k-concatenation-maximum-sum",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/k-concatenation-maximum-sum/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_17",
+    "title": "Linked List — Basics & Slow/Fast",
+    "category": "Linked Lists",
+    "note": "Draw every pointer move on paper. Linked List bugs are always off-by-one pointer bugs.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/linked-list-data-structure/",
+    "videos": [
+      {
+        "id": "v_17_1",
+        "title": "Linked List Basics for Beginners",
+        "ytId": "NSh5oNElD84",
+        "url": "https://www.youtube.com/watch?v=NSh5oNElD84"
+      },
+      {
+        "id": "v_17_2",
+        "title": "Slow & Fast Pointer: Introduction",
+        "ytId": "IxxlDYwMrZ8",
+        "url": "https://www.youtube.com/watch?v=IxxlDYwMrZ8"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_17_1",
+        "title": "Middle of the Linked List",
+        "slug": "middle-of-the-linked-list",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/middle-of-the-linked-list/"
+      },
+      {
+        "id": "p_17_2",
+        "title": "Linked List Cycle",
+        "slug": "linked-list-cycle",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/linked-list-cycle/"
+      },
+      {
+        "id": "p_17_3",
+        "title": "Remove Nth Node From End of List",
+        "slug": "remove-nth-node-from-end-of-list",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/remove-nth-node-from-end-of-list/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_18",
+    "title": "Linked List — Important Questions",
+    "category": "Linked Lists",
+    "note": "Palindrome LL = find middle + reverse half + compare. Three patterns in one problem.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/linked-list-data-structure/",
+    "videos": [
+      {
+        "id": "v_18_1",
+        "title": "Slow-Fast Pointer: Important Questions",
+        "ytId": "jDP1NkjVjWQ",
+        "url": "https://www.youtube.com/watch?v=jDP1NkjVjWQ"
+      },
+      {
+        "id": "v_18_2",
+        "title": "Slow-Fast Pointer: More Questions",
+        "ytId": "RNpZBhZBtJc",
+        "url": "https://www.youtube.com/watch?v=RNpZBhZBtJc"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_18_1",
+        "title": "Palindrome Linked List",
+        "slug": "palindrome-linked-list",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/palindrome-linked-list/"
+      },
+      {
+        "id": "p_18_2",
+        "title": "Intersection of Two Linked Lists",
+        "slug": "intersection-of-two-linked-lists",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/intersection-of-two-linked-lists/"
+      },
+      {
+        "id": "p_18_3",
+        "title": "Remove Duplicates from Sorted List",
+        "slug": "remove-duplicates-from-sorted-list",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/remove-duplicates-from-sorted-list/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_19",
+    "title": "Linked List — Cycle Detection",
+    "category": "Linked Lists",
+    "note": "Find the Duplicate Number is a cycle problem in disguise — that's the interview trick.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/linked-list-data-structure/",
+    "videos": [
+      {
+        "id": "v_19_1",
+        "title": "Start of Cycle Logic Explained",
+        "ytId": "p8efFVGuqyI",
+        "url": "https://www.youtube.com/watch?v=p8efFVGuqyI"
+      },
+      {
+        "id": "v_19_2",
+        "title": "Slow-Fast Pointer: Complete Revision",
+        "ytId": "ftpI12-e3zs",
+        "url": "https://www.youtube.com/watch?v=ftpI12-e3zs"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_19_1",
+        "title": "Linked List Cycle II",
+        "slug": "linked-list-cycle-ii",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/linked-list-cycle-ii/"
+      },
+      {
+        "id": "p_19_2",
+        "title": "Find the Duplicate Number",
+        "slug": "find-the-duplicate-number",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/find-the-duplicate-number/"
+      },
+      {
+        "id": "p_19_3",
+        "title": "Happy Number",
+        "slug": "happy-number",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/happy-number/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_20",
+    "title": "Linked List — Reversal Family",
+    "category": "Linked Lists",
+    "note": "Reverse Linked List must become muscle memory — write it 3 times today, iterative and recursive.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/linked-list-data-structure/",
+    "videos": [
+      {
+        "id": "v_20_1",
+        "title": "Linked List Reversal, The Easiest Way",
+        "ytId": "7gOCx1vbx0k",
+        "url": "https://www.youtube.com/watch?v=7gOCx1vbx0k"
+      },
+      {
+        "id": "v_20_2",
+        "title": "Reverse Nodes in K Group",
+        "ytId": "BdpT6_jotcM",
+        "url": "https://www.youtube.com/watch?v=BdpT6_jotcM"
+      },
+      {
+        "id": "v_20_3",
+        "title": "Rotate A Linked List",
+        "ytId": "5IV8CgWnf04",
+        "url": "https://www.youtube.com/watch?v=5IV8CgWnf04"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_20_1",
+        "title": "Reverse Linked List",
+        "slug": "reverse-linked-list",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/reverse-linked-list/"
+      },
+      {
+        "id": "p_20_2",
+        "title": "Reverse Nodes in k-Group",
+        "slug": "reverse-nodes-in-k-group",
+        "diff": "H",
+        "url": "https://leetcode.com/problems/reverse-nodes-in-k-group/"
+      },
+      {
+        "id": "p_20_3",
+        "title": "Rotate List",
+        "slug": "rotate-list",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/rotate-list/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_21",
+    "title": "Merge Intervals — Introduction",
+    "category": "Arrays & Hashing",
+    "note": "Sort by start time first — that single line solves half of all interval problems.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/merging-intervals/",
+    "videos": [
+      {
+        "id": "v_21_1",
+        "title": "Master Merge Interval DSA Pattern",
+        "ytId": "aH5aeejuJU8",
+        "url": "https://www.youtube.com/watch?v=aH5aeejuJU8"
+      },
+      {
+        "id": "v_21_2",
+        "title": "Merge Interval — Part 2",
+        "ytId": "yAopxaHmRn0",
+        "url": "https://www.youtube.com/watch?v=yAopxaHmRn0"
+      },
+      {
+        "id": "v_21_3",
+        "title": "Merge Intervals — Part 3",
+        "ytId": "yoh0p_Ag7Q4",
+        "url": "https://www.youtube.com/watch?v=yoh0p_Ag7Q4"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_21_1",
+        "title": "Merge Intervals",
+        "slug": "merge-intervals",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/merge-intervals/"
+      },
+      {
+        "id": "p_21_2",
+        "title": "Insert Interval",
+        "slug": "insert-interval",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/insert-interval/"
+      },
+      {
+        "id": "p_21_3",
+        "title": "Non-overlapping Intervals",
+        "slug": "non-overlapping-intervals",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/non-overlapping-intervals/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_22",
+    "title": "Merge Intervals — Interview Questions",
+    "category": "Arrays & Hashing",
+    "note": "Meeting-room style questions are the #1 interval question in Indian product-company interviews.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/merging-intervals/",
+    "videos": [
+      {
+        "id": "v_22_1",
+        "title": "Merge Overlapping Intervals",
+        "ytId": "b-qtjXsGfqo",
+        "url": "https://www.youtube.com/watch?v=b-qtjXsGfqo"
+      },
+      {
+        "id": "v_22_2",
+        "title": "Merge Interval Interview Questions (FAANG)",
+        "ytId": "o-ozvzzFpKA",
+        "url": "https://www.youtube.com/watch?v=o-ozvzzFpKA"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_22_1",
+        "title": "Minimum Number of Arrows to Burst Balloons",
+        "slug": "minimum-number-of-arrows-to-burst-balloons",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/"
+      },
+      {
+        "id": "p_22_2",
+        "title": "Interval List Intersections",
+        "slug": "interval-list-intersections",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/interval-list-intersections/"
+      },
+      {
+        "id": "p_22_3",
+        "title": "Car Pooling",
+        "slug": "car-pooling",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/car-pooling/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_23",
+    "title": "Stack — Fundamentals",
+    "category": "Stacks & Queues",
+    "note": "Min Stack teaches you to store extra info alongside data — a trick you'll reuse everywhere.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/stack-data-structure/",
+    "videos": [
+      {
+        "id": "v_23_1",
+        "title": "Introduction to Stack",
+        "ytId": "V0wJuik3WSE",
+        "url": "https://www.youtube.com/watch?v=V0wJuik3WSE"
+      },
+      {
+        "id": "v_23_2",
+        "title": "Master Stack With This Simple Trick",
+        "ytId": "K1idN2Rqcmw",
+        "url": "https://www.youtube.com/watch?v=K1idN2Rqcmw"
+      },
+      {
+        "id": "v_23_3",
+        "title": "Most Important STACK Question for FAANG",
+        "ytId": "YutYOZFt6sQ",
+        "url": "https://www.youtube.com/watch?v=YutYOZFt6sQ"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_23_1",
+        "title": "Valid Parentheses",
+        "slug": "valid-parentheses",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/valid-parentheses/"
+      },
+      {
+        "id": "p_23_2",
+        "title": "Min Stack",
+        "slug": "min-stack",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/min-stack/"
+      },
+      {
+        "id": "p_23_3",
+        "title": "Evaluate Reverse Polish Notation",
+        "slug": "evaluate-reverse-polish-notation",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/evaluate-reverse-polish-notation/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_24",
+    "title": "Stack — Monotonic Stack",
+    "category": "Stacks & Queues",
+    "note": "Monotonic stack = 'next greater / next smaller'. Once you see it, you see it everywhere.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/stack-data-structure/",
+    "videos": [
+      {
+        "id": "v_24_1",
+        "title": "Next Greater Element",
+        "ytId": "gFqOIPfAEjw",
+        "url": "https://www.youtube.com/watch?v=gFqOIPfAEjw"
+      },
+      {
+        "id": "v_24_2",
+        "title": "Master Stack With 3 Questions",
+        "ytId": "mMKZmo3iyyM",
+        "url": "https://www.youtube.com/watch?v=mMKZmo3iyyM"
+      },
+      {
+        "id": "v_24_3",
+        "title": "Revise Stack in 10 Minutes",
+        "ytId": "XpHIIQwVxvI",
+        "url": "https://www.youtube.com/watch?v=XpHIIQwVxvI"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_24_1",
+        "title": "Next Greater Element I",
+        "slug": "next-greater-element-i",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/next-greater-element-i/"
+      },
+      {
+        "id": "p_24_2",
+        "title": "Daily Temperatures",
+        "slug": "daily-temperatures",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/daily-temperatures/"
+      },
+      {
+        "id": "p_24_3",
+        "title": "Largest Rectangle in Histogram",
+        "slug": "largest-rectangle-in-histogram",
+        "diff": "H",
+        "url": "https://leetcode.com/problems/largest-rectangle-in-histogram/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_25",
+    "title": "Binary Search — Fundamentals",
+    "category": "Binary Search",
+    "note": "AI track starts today. 90 min DSA + 30 min AI. Don't skip the AI video — it compounds.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/binary-search/",
+    "videos": [
+      {
+        "id": "v_25_1",
+        "title": "You DON'T Know Binary Search",
+        "ytId": "S0E1Ix67qbc",
+        "url": "https://www.youtube.com/watch?v=S0E1Ix67qbc"
+      },
+      {
+        "id": "v_25_2",
+        "title": "The Best Intro To Binary Search",
+        "ytId": "zEEwwS9_fwA",
+        "url": "https://www.youtube.com/watch?v=zEEwwS9_fwA"
+      },
+      {
+        "id": "v_25_3",
+        "title": "Find Mountain Peak",
+        "ytId": "RuBcXYteHj0",
+        "url": "https://www.youtube.com/watch?v=RuBcXYteHj0"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_25_1",
+        "title": "Binary Search",
+        "slug": "binary-search",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/binary-search/"
+      },
+      {
+        "id": "p_25_2",
+        "title": "Search Insert Position",
+        "slug": "search-insert-position",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/search-insert-position/"
+      },
+      {
+        "id": "p_25_3",
+        "title": "First Bad Version",
+        "slug": "first-bad-version",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/first-bad-version/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_26",
+    "title": "Binary Search — Rotated Arrays",
+    "category": "Binary Search",
+    "note": "Set up your Python env + API key today alongside the AI video. Get it working before Day 27.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/binary-search/",
+    "videos": [
+      {
+        "id": "v_26_1",
+        "title": "I Will Make Binary Search Easy For You",
+        "ytId": "91qkzhmEO48",
+        "url": "https://www.youtube.com/watch?v=91qkzhmEO48"
+      },
+      {
+        "id": "v_26_2",
+        "title": "Don't Miss This Binary Search Question",
+        "ytId": "TIBZsd-Qlrg",
+        "url": "https://www.youtube.com/watch?v=TIBZsd-Qlrg"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_26_1",
+        "title": "Find Peak Element",
+        "slug": "find-peak-element",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/find-peak-element/"
+      },
+      {
+        "id": "p_26_2",
+        "title": "Search in Rotated Sorted Array",
+        "slug": "search-in-rotated-sorted-array",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/search-in-rotated-sorted-array/"
+      },
+      {
+        "id": "p_26_3",
+        "title": "Find Minimum in Rotated Sorted Array",
+        "slug": "find-minimum-in-rotated-sorted-array",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_27",
+    "title": "Binary Search on Answer",
+    "category": "Binary Search",
+    "note": "'Binary search on answer' is the single highest-ROI pattern for product-company rounds.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/binary-search/",
+    "videos": [
+      {
+        "id": "v_27_1",
+        "title": "Solve All Binary Search Questions",
+        "ytId": "0Kxg0LPGwFo",
+        "url": "https://www.youtube.com/watch?v=0Kxg0LPGwFo"
+      },
+      {
+        "id": "v_27_2",
+        "title": "Aggressive Cows Explained",
+        "ytId": "TF53eWL47ws",
+        "url": "https://www.youtube.com/watch?v=TF53eWL47ws"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_27_1",
+        "title": "Koko Eating Bananas",
+        "slug": "koko-eating-bananas",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/koko-eating-bananas/"
+      },
+      {
+        "id": "p_27_2",
+        "title": "Capacity To Ship Packages Within D Days",
+        "slug": "capacity-to-ship-packages-within-d-days",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/"
+      },
+      {
+        "id": "p_27_3",
+        "title": "Split Array Largest Sum",
+        "slug": "split-array-largest-sum",
+        "diff": "H",
+        "url": "https://leetcode.com/problems/split-array-largest-sum/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_28",
+    "title": "Binary Search — 2D & Hard",
+    "category": "Binary Search",
+    "note": "Median of Two Sorted Arrays is hard. Attempt, fail, watch, redo tomorrow. That's the loop.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/binary-search/",
+    "videos": [
+      {
+        "id": "v_28_1",
+        "title": "Amazon Binary Search Question",
+        "ytId": "TqxB7zruBm4",
+        "url": "https://www.youtube.com/watch?v=TqxB7zruBm4"
+      },
+      {
+        "id": "v_28_2",
+        "title": "Binary Search on 2D Array",
+        "ytId": "stji3QvQ-OU",
+        "url": "https://www.youtube.com/watch?v=stji3QvQ-OU"
+      },
+      {
+        "id": "v_28_3",
+        "title": "The 40 LPA Binary Search Question",
+        "ytId": "DSGtYGZKEZ4",
+        "url": "https://www.youtube.com/watch?v=DSGtYGZKEZ4"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_28_1",
+        "title": "Search a 2D Matrix",
+        "slug": "search-a-2d-matrix",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/search-a-2d-matrix/"
+      },
+      {
+        "id": "p_28_2",
+        "title": "Find First and Last Position of Element",
+        "slug": "find-first-and-last-position-of-element-in-sorted-array",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/"
+      },
+      {
+        "id": "p_28_3",
+        "title": "Median of Two Sorted Arrays",
+        "slug": "median-of-two-sorted-arrays",
+        "diff": "H",
+        "url": "https://leetcode.com/problems/median-of-two-sorted-arrays/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_29",
+    "title": "Heap — Introduction",
+    "category": "Heaps & Priority Queues",
+    "note": "Min-heap for 'k largest', max-heap for 'k smallest'. Counter-intuitive — write it on a sticky note.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/heap-data-structure/",
+    "videos": [
+      {
+        "id": "v_29_1",
+        "title": "Introduction To Heap DSA Pattern",
+        "ytId": "_1AbrkD8pak",
+        "url": "https://www.youtube.com/watch?v=_1AbrkD8pak"
+      },
+      {
+        "id": "v_29_2",
+        "title": "The Best Video To Learn HEAP",
+        "ytId": "zzu-k85RLGs",
+        "url": "https://www.youtube.com/watch?v=zzu-k85RLGs"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_29_1",
+        "title": "Kth Largest Element in an Array",
+        "slug": "kth-largest-element-in-an-array",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/kth-largest-element-in-an-array/"
+      },
+      {
+        "id": "p_29_2",
+        "title": "Last Stone Weight",
+        "slug": "last-stone-weight",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/last-stone-weight/"
+      },
+      {
+        "id": "p_29_3",
+        "title": "Kth Largest Element in a Stream",
+        "slug": "kth-largest-element-in-a-stream",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/kth-largest-element-in-a-stream/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_30",
+    "title": "Heap — Top K Pattern",
+    "category": "Heaps & Priority Queues",
+    "note": "One month done. Look back at Day 1 — you couldn't write a loop. Now you're doing heaps.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/heap-data-structure/",
+    "videos": [
+      {
+        "id": "v_30_1",
+        "title": "HEAP On Pairs Explained",
+        "ytId": "I1-0ALAJxZI",
+        "url": "https://www.youtube.com/watch?v=I1-0ALAJxZI"
+      },
+      {
+        "id": "v_30_2",
+        "title": "Solve Any HEAP Question By This Template",
+        "ytId": "5Net0Dd7NAA",
+        "url": "https://www.youtube.com/watch?v=5Net0Dd7NAA"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_30_1",
+        "title": "Top K Frequent Elements",
+        "slug": "top-k-frequent-elements",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/top-k-frequent-elements/"
+      },
+      {
+        "id": "p_30_2",
+        "title": "K Closest Points to Origin",
+        "slug": "k-closest-points-to-origin",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/k-closest-points-to-origin/"
+      },
+      {
+        "id": "p_30_3",
+        "title": "Sort Characters By Frequency",
+        "slug": "sort-characters-by-frequency",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/sort-characters-by-frequency/"
+      },
+      {
+        "id": "p_30_add_daily-temperatures",
+        "title": "Daily Temperatures",
+        "slug": "daily-temperatures",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/daily-temperatures/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_31",
+    "title": "Heap — Greedy Combination",
+    "category": "Heaps & Priority Queues",
+    "note": "AI mini project day — actually build it, don't just watch. A built project beats 10 watched videos.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/heap-data-structure/",
+    "videos": [
+      {
+        "id": "v_31_1",
+        "title": "5 Step Template For Any HEAP Problem",
+        "ytId": "ks8rocoXbJk",
+        "url": "https://www.youtube.com/watch?v=ks8rocoXbJk"
+      },
+      {
+        "id": "v_31_2",
+        "title": "HEAP Greedy DSA Pattern",
+        "ytId": "SCe8N_v-8Ls",
+        "url": "https://www.youtube.com/watch?v=SCe8N_v-8Ls"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_31_1",
+        "title": "Reorganize String",
+        "slug": "reorganize-string",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/reorganize-string/"
+      },
+      {
+        "id": "p_31_2",
+        "title": "Furthest Building You Can Reach",
+        "slug": "furthest-building-you-can-reach",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/furthest-building-you-can-reach/"
+      },
+      {
+        "id": "p_31_3",
+        "title": "Maximum Number of Events That Can Be Attended",
+        "slug": "maximum-number-of-events-that-can-be-attended",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_32",
+    "title": "Heap — Hard Problems",
+    "category": "Heaps & Priority Queues",
+    "note": "Merge k Sorted Lists is asked at Microsoft, Amazon and Google. Non-negotiable.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/heap-data-structure/",
+    "videos": [
+      {
+        "id": "v_32_1",
+        "title": "Google Heap Question: IPO",
+        "ytId": "DYBWbmhisiM",
+        "url": "https://www.youtube.com/watch?v=DYBWbmhisiM"
+      },
+      {
+        "id": "v_32_2",
+        "title": "Merge K Sorted Lists",
+        "ytId": "55aenUfSIhQ",
+        "url": "https://www.youtube.com/watch?v=55aenUfSIhQ"
+      },
+      {
+        "id": "v_32_3",
+        "title": "CPU Task Scheduler",
+        "ytId": "1yax0YQOb8w",
+        "url": "https://www.youtube.com/watch?v=1yax0YQOb8w"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_32_1",
+        "title": "IPO",
+        "slug": "ipo",
+        "diff": "H",
+        "url": "https://leetcode.com/problems/ipo/"
+      },
+      {
+        "id": "p_32_2",
+        "title": "Merge k Sorted Lists",
+        "slug": "merge-k-sorted-lists",
+        "diff": "H",
+        "url": "https://leetcode.com/problems/merge-k-sorted-lists/"
+      },
+      {
+        "id": "p_32_3",
+        "title": "Task Scheduler",
+        "slug": "task-scheduler",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/task-scheduler/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_33",
+    "title": "Recursion — Foundations",
+    "category": "Recursion & Backtracking",
+    "note": "Recursion clicks when you stop tracing the whole tree and trust the recursive call. Let go.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/introduction-to-recursion-2/",
+    "videos": [
+      {
+        "id": "v_33_1",
+        "title": "Intro To Recursion DSA Pattern",
+        "ytId": "HdPb_thlF5s",
+        "url": "https://www.youtube.com/watch?v=HdPb_thlF5s"
+      },
+      {
+        "id": "v_33_2",
+        "title": "Recursion Fixed Template For All Questions",
+        "ytId": "Qh_U6NYf99o",
+        "url": "https://www.youtube.com/watch?v=Qh_U6NYf99o"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_33_1",
+        "title": "Fibonacci Number",
+        "slug": "fibonacci-number",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/fibonacci-number/"
+      },
+      {
+        "id": "p_33_2",
+        "title": "Power of Two",
+        "slug": "power-of-two",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/power-of-two/"
+      },
+      {
+        "id": "p_33_3",
+        "title": "Reverse String",
+        "slug": "reverse-string",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/reverse-string/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_34",
+    "title": "Recursion & Backtracking",
+    "category": "Recursion & Backtracking",
+    "note": "Subsets and Permutations are the two parent problems. Every backtracking question is their child.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/introduction-to-recursion-2/",
+    "videos": [
+      {
+        "id": "v_34_1",
+        "title": "Recursion & Backtracking Explained",
+        "ytId": "I081UkZCLlc",
+        "url": "https://www.youtube.com/watch?v=I081UkZCLlc"
+      },
+      {
+        "id": "v_34_2",
+        "title": "Learn Recursion Like A Pro",
+        "ytId": "j4wjZqzhMqc",
+        "url": "https://www.youtube.com/watch?v=j4wjZqzhMqc"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_34_1",
+        "title": "Subsets",
+        "slug": "subsets",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/subsets/"
+      },
+      {
+        "id": "p_34_2",
+        "title": "Permutations",
+        "slug": "permutations",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/permutations/"
+      },
+      {
+        "id": "p_34_3",
+        "title": "Letter Combinations of a Phone Number",
+        "slug": "letter-combinations-of-a-phone-number",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/letter-combinations-of-a-phone-number/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_35",
+    "title": "Backtracking — Core Problems",
+    "category": "Recursion & Backtracking",
+    "note": "Duplicates in backtracking = sort first, then skip equal siblings. Same fix every time.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/introduction-to-recursion-2/",
+    "videos": [
+      {
+        "id": "v_35_1",
+        "title": "Master Recursion in 3 Easy Questions",
+        "ytId": "-gC-QEdpvO4",
+        "url": "https://www.youtube.com/watch?v=-gC-QEdpvO4"
+      },
+      {
+        "id": "v_35_2",
+        "title": "Start Recursion Backtracking With This",
+        "ytId": "PqwlS4bcr1Y",
+        "url": "https://www.youtube.com/watch?v=PqwlS4bcr1Y"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_35_1",
+        "title": "Combination Sum",
+        "slug": "combination-sum",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/combination-sum/"
+      },
+      {
+        "id": "p_35_2",
+        "title": "Subsets II",
+        "slug": "subsets-ii",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/subsets-ii/"
+      },
+      {
+        "id": "p_35_3",
+        "title": "Palindrome Partitioning",
+        "slug": "palindrome-partitioning",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/palindrome-partitioning/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_36",
+    "title": "Backtracking — Hard",
+    "category": "Recursion & Backtracking",
+    "note": "N-Queens looks scary and is actually just 'place, recurse, undo'. You already know the pattern.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/introduction-to-recursion-2/",
+    "videos": [
+      {
+        "id": "v_36_1",
+        "title": "5 Point Template For Any Recursion Question",
+        "ytId": "IKfIT6uFOcs",
+        "url": "https://www.youtube.com/watch?v=IKfIT6uFOcs"
+      },
+      {
+        "id": "v_36_2",
+        "title": "Combination Sum Explained Simply",
+        "ytId": "AflRvP5LFFc",
+        "url": "https://www.youtube.com/watch?v=AflRvP5LFFc"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_36_1",
+        "title": "Word Search",
+        "slug": "word-search",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/word-search/"
+      },
+      {
+        "id": "p_36_2",
+        "title": "N-Queens",
+        "slug": "n-queens",
+        "diff": "H",
+        "url": "https://leetcode.com/problems/n-queens/"
+      },
+      {
+        "id": "p_36_3",
+        "title": "Sudoku Solver",
+        "slug": "sudoku-solver",
+        "diff": "H",
+        "url": "https://leetcode.com/problems/sudoku-solver/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_37",
+    "title": "Trees — Traversals",
+    "category": "Trees & BST",
+    "note": "Inorder of a BST is sorted. That one fact solves a surprising number of questions.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/binary-tree-data-structure/",
+    "videos": [
+      {
+        "id": "v_37_1",
+        "title": "Starting TREE Series",
+        "ytId": "VdujirLGDDE",
+        "url": "https://www.youtube.com/watch?v=VdujirLGDDE"
+      },
+      {
+        "id": "v_37_2",
+        "title": "Tree Traversals Made Simple",
+        "ytId": "ZvYJT_QwnEw",
+        "url": "https://www.youtube.com/watch?v=ZvYJT_QwnEw"
+      },
+      {
+        "id": "v_37_3",
+        "title": "Level Order Traversal",
+        "ytId": "-g6h0Ok1Buk",
+        "url": "https://www.youtube.com/watch?v=-g6h0Ok1Buk"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_37_1",
+        "title": "Binary Tree Inorder Traversal",
+        "slug": "binary-tree-inorder-traversal",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/binary-tree-inorder-traversal/"
+      },
+      {
+        "id": "p_37_2",
+        "title": "Binary Tree Preorder Traversal",
+        "slug": "binary-tree-preorder-traversal",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/binary-tree-preorder-traversal/"
+      },
+      {
+        "id": "p_37_3",
+        "title": "Binary Tree Level Order Traversal",
+        "slug": "binary-tree-level-order-traversal",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/binary-tree-level-order-traversal/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_38",
+    "title": "Trees — The Universal Pattern",
+    "category": "Trees & BST",
+    "note": "Almost every tree question = solve left, solve right, combine. Find that shape in each problem.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/binary-tree-data-structure/",
+    "videos": [
+      {
+        "id": "v_38_1",
+        "title": "One Pattern To Solve Any Tree Question",
+        "ytId": "nkWopJZsqXc",
+        "url": "https://www.youtube.com/watch?v=nkWopJZsqXc"
+      },
+      {
+        "id": "v_38_2",
+        "title": "Check for Symmetrical Binary Trees",
+        "ytId": "dXJdiFMLdZQ",
+        "url": "https://www.youtube.com/watch?v=dXJdiFMLdZQ"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_38_1",
+        "title": "Maximum Depth of Binary Tree",
+        "slug": "maximum-depth-of-binary-tree",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/maximum-depth-of-binary-tree/"
+      },
+      {
+        "id": "p_38_2",
+        "title": "Same Tree",
+        "slug": "same-tree",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/same-tree/"
+      },
+      {
+        "id": "p_38_3",
+        "title": "Symmetric Tree",
+        "slug": "symmetric-tree",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/symmetric-tree/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_39",
+    "title": "Trees — LCA & BST Intro",
+    "category": "Trees & BST",
+    "note": "LCA in BST is 3 lines. LCA in Binary Tree is 5. Know why the BST version is shorter.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/binary-tree-data-structure/",
+    "videos": [
+      {
+        "id": "v_39_1",
+        "title": "LCA in Binary Tree",
+        "ytId": "_UoIHF3KUpE",
+        "url": "https://www.youtube.com/watch?v=_UoIHF3KUpE"
+      },
+      {
+        "id": "v_39_2",
+        "title": "Introduction to Binary Search Tree",
+        "ytId": "CDo0V5Jbb2o",
+        "url": "https://www.youtube.com/watch?v=CDo0V5Jbb2o"
+      },
+      {
+        "id": "v_39_3",
+        "title": "LCA in Binary Search Tree",
+        "ytId": "QopDohCvJVA",
+        "url": "https://www.youtube.com/watch?v=QopDohCvJVA"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_39_1",
+        "title": "Lowest Common Ancestor of a Binary Tree",
+        "slug": "lowest-common-ancestor-of-a-binary-tree",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/"
+      },
+      {
+        "id": "p_39_2",
+        "title": "Lowest Common Ancestor of a BST",
+        "slug": "lowest-common-ancestor-of-a-binary-search-tree",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/"
+      },
+      {
+        "id": "p_39_3",
+        "title": "Search in a Binary Search Tree",
+        "slug": "search-in-a-binary-search-tree",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/search-in-a-binary-search-tree/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_40",
+    "title": "Trees — BST Problems",
+    "category": "Trees & BST",
+    "note": "Diameter teaches 'return one thing, track another'. That trick unlocks the hard tree problems.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/binary-tree-data-structure/",
+    "videos": [
+      {
+        "id": "v_40_1",
+        "title": "Two Sum in Binary Search Tree",
+        "ytId": "Zr2z8DD6TuQ",
+        "url": "https://www.youtube.com/watch?v=Zr2z8DD6TuQ"
+      },
+      {
+        "id": "v_40_2",
+        "title": "Path Sum in 5 Minutes",
+        "ytId": "Sat-0sqezpM",
+        "url": "https://www.youtube.com/watch?v=Sat-0sqezpM"
+      },
+      {
+        "id": "v_40_3",
+        "title": "Diameter of Binary Tree",
+        "ytId": "_V7J7exlyzk",
+        "url": "https://www.youtube.com/watch?v=_V7J7exlyzk"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_40_1",
+        "title": "Two Sum IV — Input is a BST",
+        "slug": "two-sum-iv-input-is-a-bst",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/two-sum-iv-input-is-a-bst/"
+      },
+      {
+        "id": "p_40_2",
+        "title": "Path Sum",
+        "slug": "path-sum",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/path-sum/"
+      },
+      {
+        "id": "p_40_3",
+        "title": "Diameter of Binary Tree",
+        "slug": "diameter-of-binary-tree",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/diameter-of-binary-tree/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_41",
+    "title": "Trees — Validation & Construction",
+    "category": "Trees & BST",
+    "note": "Validating a BST by comparing only parent-child is the classic wrong answer. Carry min/max ranges.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/binary-tree-data-structure/",
+    "videos": [
+      {
+        "id": "v_41_1",
+        "title": "The BST Validation Problem Everyone Gets Wrong",
+        "ytId": "5PrzZfhk1OQ",
+        "url": "https://www.youtube.com/watch?v=5PrzZfhk1OQ"
+      },
+      {
+        "id": "v_41_2",
+        "title": "Construct Binary Tree from Preorder & Inorder",
+        "ytId": "14NH9aD7XeY",
+        "url": "https://www.youtube.com/watch?v=14NH9aD7XeY"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_41_1",
+        "title": "Validate Binary Search Tree",
+        "slug": "validate-binary-search-tree",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/validate-binary-search-tree/"
+      },
+      {
+        "id": "p_41_2",
+        "title": "Kth Smallest Element in a BST",
+        "slug": "kth-smallest-element-in-a-bst",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/kth-smallest-element-in-a-bst/"
+      },
+      {
+        "id": "p_41_3",
+        "title": "Construct Binary Tree from Preorder and Inorder Traversal",
+        "slug": "construct-binary-tree-from-preorder-and-inorder-traversal",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_42",
+    "title": "Graphs — Representation & DFS/BFS",
+    "category": "Graphs",
+    "note": "A 2D grid IS a graph. Once you accept that, half of graph questions become easy.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/graph-data-structure-and-algorithms/",
+    "videos": [
+      {
+        "id": "v_42_1",
+        "title": "Intro To Graphs DSA Pattern",
+        "ytId": "vcx1HWoHK1o",
+        "url": "https://www.youtube.com/watch?v=vcx1HWoHK1o"
+      },
+      {
+        "id": "v_42_2",
+        "title": "Adjacency Matrix vs Adjacency List",
+        "ytId": "WR-hWofGb_U",
+        "url": "https://www.youtube.com/watch?v=WR-hWofGb_U"
+      },
+      {
+        "id": "v_42_3",
+        "title": "Master DFS/BFS in Graphs",
+        "ytId": "O04KAy7cLBs",
+        "url": "https://www.youtube.com/watch?v=O04KAy7cLBs"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_42_1",
+        "title": "Find if Path Exists in Graph",
+        "slug": "find-if-path-exists-in-graph",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/find-if-path-exists-in-graph/"
+      },
+      {
+        "id": "p_42_2",
+        "title": "Flood Fill",
+        "slug": "flood-fill",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/flood-fill/"
+      },
+      {
+        "id": "p_42_3",
+        "title": "Max Area of Island",
+        "slug": "max-area-of-island",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/max-area-of-island/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_43",
+    "title": "Graphs — Grid BFS & DFS",
+    "category": "Graphs",
+    "note": "Number of Islands is THE most asked graph question in Indian placement drives.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/graph-data-structure-and-algorithms/",
+    "videos": [
+      {
+        "id": "v_43_1",
+        "title": "Number of Islands",
+        "ytId": "mbSYZzBjs4U",
+        "url": "https://www.youtube.com/watch?v=mbSYZzBjs4U"
+      },
+      {
+        "id": "v_43_2",
+        "title": "Rotten Oranges: Multi-Source BFS",
+        "ytId": "4L4MYtxGh9s",
+        "url": "https://www.youtube.com/watch?v=4L4MYtxGh9s"
+      },
+      {
+        "id": "v_43_3",
+        "title": "DFS Cycle Detection",
+        "ytId": "D5jgZ4PnU5o",
+        "url": "https://www.youtube.com/watch?v=D5jgZ4PnU5o"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_43_1",
+        "title": "Number of Islands",
+        "slug": "number-of-islands",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/number-of-islands/"
+      },
+      {
+        "id": "p_43_2",
+        "title": "Rotting Oranges",
+        "slug": "rotting-oranges",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/rotting-oranges/"
+      },
+      {
+        "id": "p_43_3",
+        "title": "01 Matrix",
+        "slug": "01-matrix",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/01-matrix/"
+      },
+      {
+        "id": "p_43_add_clone-graph",
+        "title": "Clone Graph",
+        "slug": "clone-graph",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/clone-graph/"
+      },
+      {
+        "id": "p_43_add_course-schedule",
+        "title": "Course Schedule",
+        "slug": "course-schedule",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/course-schedule/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_44",
+    "title": "Graphs — Topological Sort & Bipartite",
+    "category": "Graphs",
+    "note": "'Can you finish all courses' = cycle detection in a directed graph. Recognise the disguise.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/graph-data-structure-and-algorithms/",
+    "videos": [
+      {
+        "id": "v_44_1",
+        "title": "Topological Sort Explained",
+        "ytId": "OSYgRvaWFSI",
+        "url": "https://www.youtube.com/watch?v=OSYgRvaWFSI"
+      },
+      {
+        "id": "v_44_2",
+        "title": "Bipartite Graph / Graph Coloring",
+        "ytId": "LIGrIglQ7TY",
+        "url": "https://www.youtube.com/watch?v=LIGrIglQ7TY"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_44_1",
+        "title": "Course Schedule",
+        "slug": "course-schedule",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/course-schedule/"
+      },
+      {
+        "id": "p_44_2",
+        "title": "Course Schedule II",
+        "slug": "course-schedule-ii",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/course-schedule-ii/"
+      },
+      {
+        "id": "p_44_3",
+        "title": "Is Graph Bipartite?",
+        "slug": "is-graph-bipartite",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/is-graph-bipartite/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_45",
+    "title": "Graphs — Shortest Path Basics",
+    "category": "Graphs",
+    "note": "Unweighted shortest path = plain BFS. Don't reach for Dijkstra when BFS is enough.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/graph-data-structure-and-algorithms/",
+    "videos": [
+      {
+        "id": "v_45_1",
+        "title": "Surrounded Regions",
+        "ytId": "6ZtNHvGeEu4",
+        "url": "https://www.youtube.com/watch?v=6ZtNHvGeEu4"
+      },
+      {
+        "id": "v_45_2",
+        "title": "Shortest Path in Non-Weighted Graph",
+        "ytId": "HBI6DQOT_qk",
+        "url": "https://www.youtube.com/watch?v=HBI6DQOT_qk"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_45_1",
+        "title": "Surrounded Regions",
+        "slug": "surrounded-regions",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/surrounded-regions/"
+      },
+      {
+        "id": "p_45_2",
+        "title": "Shortest Path in Binary Matrix",
+        "slug": "shortest-path-in-binary-matrix",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/shortest-path-in-binary-matrix/"
+      },
+      {
+        "id": "p_45_3",
+        "title": "Network Delay Time",
+        "slug": "network-delay-time",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/network-delay-time/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_46",
+    "title": "Graphs — Dijkstra & Bellman-Ford",
+    "category": "Graphs",
+    "note": "Dijkstra = BFS with a priority queue. That's genuinely the whole idea.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/graph-data-structure-and-algorithms/",
+    "videos": [
+      {
+        "id": "v_46_1",
+        "title": "Dijkstra's Algorithm Explained",
+        "ytId": "93copdtW4ZQ",
+        "url": "https://www.youtube.com/watch?v=93copdtW4ZQ"
+      },
+      {
+        "id": "v_46_2",
+        "title": "2 Important Dijkstra Questions",
+        "ytId": "Mb01XUSuLjE",
+        "url": "https://www.youtube.com/watch?v=Mb01XUSuLjE"
+      },
+      {
+        "id": "v_46_3",
+        "title": "Bellman-Ford Algorithm",
+        "ytId": "A3sZWwalzz4",
+        "url": "https://www.youtube.com/watch?v=A3sZWwalzz4"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_46_1",
+        "title": "Path With Minimum Effort",
+        "slug": "path-with-minimum-effort",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/path-with-minimum-effort/"
+      },
+      {
+        "id": "p_46_2",
+        "title": "Cheapest Flights Within K Stops",
+        "slug": "cheapest-flights-within-k-stops",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/cheapest-flights-within-k-stops/"
+      },
+      {
+        "id": "p_46_3",
+        "title": "Swim in Rising Water",
+        "slug": "swim-in-rising-water",
+        "diff": "H",
+        "url": "https://leetcode.com/problems/swim-in-rising-water/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_47",
+    "title": "Graphs — MST & Word Ladder",
+    "category": "Graphs",
+    "note": "Graphs done. This is where most self-study students quit — you didn't.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/graph-data-structure-and-algorithms/",
+    "videos": [
+      {
+        "id": "v_47_1",
+        "title": "Cheapest Flights Within K Stops",
+        "ytId": "-AEEZEWOA-E",
+        "url": "https://www.youtube.com/watch?v=-AEEZEWOA-E"
+      },
+      {
+        "id": "v_47_2",
+        "title": "Prim's Algorithm — Minimum Spanning Tree",
+        "ytId": "u0SH8wO85m0",
+        "url": "https://www.youtube.com/watch?v=u0SH8wO85m0"
+      },
+      {
+        "id": "v_47_3",
+        "title": "Word Ladder Explained",
+        "ytId": "HpsjPUwQHfw",
+        "url": "https://www.youtube.com/watch?v=HpsjPUwQHfw"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_47_1",
+        "title": "Min Cost to Connect All Points",
+        "slug": "min-cost-to-connect-all-points",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/min-cost-to-connect-all-points/"
+      },
+      {
+        "id": "p_47_2",
+        "title": "Word Ladder",
+        "slug": "word-ladder",
+        "diff": "H",
+        "url": "https://leetcode.com/problems/word-ladder/"
+      },
+      {
+        "id": "p_47_3",
+        "title": "Number of Provinces",
+        "slug": "number-of-provinces",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/number-of-provinces/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_48",
+    "title": "DP — Introduction",
+    "category": "Dynamic Programming",
+    "note": "DP = recursion + memo. You already know recursion. This is one extra line, not a new subject.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/dynamic-programming/",
+    "videos": [
+      {
+        "id": "v_48_1",
+        "title": "Introduction To Dynamic Programming",
+        "ytId": "cmSh2xbyX7g",
+        "url": "https://www.youtube.com/watch?v=cmSh2xbyX7g"
+      },
+      {
+        "id": "v_48_2",
+        "title": "When And How To Use DP",
+        "ytId": "-CvRpL_iUKo",
+        "url": "https://www.youtube.com/watch?v=-CvRpL_iUKo"
+      },
+      {
+        "id": "v_48_3",
+        "title": "Climbing Stairs — 1D DP",
+        "ytId": "JLdrJE7udZo",
+        "url": "https://www.youtube.com/watch?v=JLdrJE7udZo"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_48_1",
+        "title": "Climbing Stairs",
+        "slug": "climbing-stairs",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/climbing-stairs/"
+      },
+      {
+        "id": "p_48_2",
+        "title": "Min Cost Climbing Stairs",
+        "slug": "min-cost-climbing-stairs",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/min-cost-climbing-stairs/"
+      },
+      {
+        "id": "p_48_3",
+        "title": "Fibonacci Number",
+        "slug": "fibonacci-number",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/fibonacci-number/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_49",
+    "title": "DP — House Robber & Knapsack",
+    "category": "Dynamic Programming",
+    "note": "Write every DP problem as recursion + memo FIRST. Convert to tabulation only after it works.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/dynamic-programming/",
+    "videos": [
+      {
+        "id": "v_49_1",
+        "title": "House Robber",
+        "ytId": "FMhXZU-eUNQ",
+        "url": "https://www.youtube.com/watch?v=FMhXZU-eUNQ"
+      },
+      {
+        "id": "v_49_2",
+        "title": "0/1 Knapsack",
+        "ytId": "Yp1G_KY7-wY",
+        "url": "https://www.youtube.com/watch?v=Yp1G_KY7-wY"
+      },
+      {
+        "id": "v_49_3",
+        "title": "Tabulation Explained",
+        "ytId": "yEwnsPI_tUY",
+        "url": "https://www.youtube.com/watch?v=yEwnsPI_tUY"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_49_1",
+        "title": "House Robber",
+        "slug": "house-robber",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/house-robber/"
+      },
+      {
+        "id": "p_49_2",
+        "title": "House Robber II",
+        "slug": "house-robber-ii",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/house-robber-ii/"
+      },
+      {
+        "id": "p_49_3",
+        "title": "Partition Equal Subset Sum",
+        "slug": "partition-equal-subset-sum",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/partition-equal-subset-sum/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_50",
+    "title": "DP — Subset Sum Family",
+    "category": "Dynamic Programming",
+    "note": "10 days left. Coin Change is the knapsack you'll actually be asked in an interview.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/dynamic-programming/",
+    "videos": [
+      {
+        "id": "v_50_1",
+        "title": "0-1 Knapsack Tabulation",
+        "ytId": "LWDYXNN4SHU",
+        "url": "https://www.youtube.com/watch?v=LWDYXNN4SHU"
+      },
+      {
+        "id": "v_50_2",
+        "title": "Subset Sum Equals Target",
+        "ytId": "M0XjVs41H2s",
+        "url": "https://www.youtube.com/watch?v=M0XjVs41H2s"
+      },
+      {
+        "id": "v_50_3",
+        "title": "3 DP Problems in 30 Minutes",
+        "ytId": "QqDR0Fo9ayM",
+        "url": "https://www.youtube.com/watch?v=QqDR0Fo9ayM"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_50_1",
+        "title": "Target Sum",
+        "slug": "target-sum",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/target-sum/"
+      },
+      {
+        "id": "p_50_2",
+        "title": "Coin Change",
+        "slug": "coin-change",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/coin-change/"
+      },
+      {
+        "id": "p_50_3",
+        "title": "Coin Change II",
+        "slug": "coin-change-ii",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/coin-change-ii/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_51",
+    "title": "DP — LIS & LCS",
+    "category": "Dynamic Programming",
+    "note": "LCS is the parent of Edit Distance, Longest Palindromic Subsequence and more. Master the parent.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/dynamic-programming/",
+    "videos": [
+      {
+        "id": "v_51_1",
+        "title": "Longest Increasing Subsequence — Part 1",
+        "ytId": "CdGBURVBMn4",
+        "url": "https://www.youtube.com/watch?v=CdGBURVBMn4"
+      },
+      {
+        "id": "v_51_2",
+        "title": "LIS: From Recursion to Tabulation",
+        "ytId": "w9qndpVOHks",
+        "url": "https://www.youtube.com/watch?v=w9qndpVOHks"
+      },
+      {
+        "id": "v_51_3",
+        "title": "LCS In 20 Minutes",
+        "ytId": "YkM-xfnZ4DY",
+        "url": "https://www.youtube.com/watch?v=YkM-xfnZ4DY"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_51_1",
+        "title": "Longest Increasing Subsequence",
+        "slug": "longest-increasing-subsequence",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/longest-increasing-subsequence/"
+      },
+      {
+        "id": "p_51_2",
+        "title": "Longest Common Subsequence",
+        "slug": "longest-common-subsequence",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/longest-common-subsequence/"
+      },
+      {
+        "id": "p_51_3",
+        "title": "Edit Distance",
+        "slug": "edit-distance",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/edit-distance/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_52",
+    "title": "DP — 2D Grids & Strings",
+    "category": "Dynamic Programming",
+    "note": "Grid DP is the friendliest DP. Draw the table and fill it by hand once.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/dynamic-programming/",
+    "videos": [
+      {
+        "id": "v_52_1",
+        "title": "The Easiest DP Question Ever",
+        "ytId": "lAdOVqukPCI",
+        "url": "https://www.youtube.com/watch?v=lAdOVqukPCI"
+      },
+      {
+        "id": "v_52_2",
+        "title": "Why I Am The Best DSA Teacher",
+        "ytId": "6XSrjOmTJio",
+        "url": "https://www.youtube.com/watch?v=6XSrjOmTJio"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_52_1",
+        "title": "Unique Paths",
+        "slug": "unique-paths",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/unique-paths/"
+      },
+      {
+        "id": "p_52_2",
+        "title": "Minimum Path Sum",
+        "slug": "minimum-path-sum",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/minimum-path-sum/"
+      },
+      {
+        "id": "p_52_3",
+        "title": "Longest Palindromic Substring",
+        "slug": "longest-palindromic-substring",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/longest-palindromic-substring/"
+      },
+      {
+        "id": "p_52_add_longest-common-subsequence",
+        "title": "Longest Common Subsequence",
+        "slug": "longest-common-subsequence",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/longest-common-subsequence/"
+      },
+      {
+        "id": "p_52_add_coin-change",
+        "title": "Coin Change",
+        "slug": "coin-change",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/coin-change/"
+      },
+      {
+        "id": "p_52_add_partition-equal-subset-sum",
+        "title": "Partition Equal Subset Sum",
+        "slug": "partition-equal-subset-sum",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/partition-equal-subset-sum/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_53",
+    "title": "DP — Hard & Full Revision",
+    "category": "Dynamic Programming",
+    "note": "DP done. From here on it's revision and interview reps, no new syllabus.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/dynamic-programming/",
+    "videos": [
+      {
+        "id": "v_53_1",
+        "title": "The Problem Most Teachers Skip",
+        "ytId": "wKao8Ttesqk",
+        "url": "https://www.youtube.com/watch?v=wKao8Ttesqk"
+      },
+      {
+        "id": "v_53_2",
+        "title": "DP Full Revision and Next Steps",
+        "ytId": "dyG4JBKh6tA",
+        "url": "https://www.youtube.com/watch?v=dyG4JBKh6tA"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_53_1",
+        "title": "Word Break",
+        "slug": "word-break",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/word-break/"
+      },
+      {
+        "id": "p_53_2",
+        "title": "Best Time to Buy and Sell Stock III",
+        "slug": "best-time-to-buy-and-sell-stock-iii",
+        "diff": "H",
+        "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/"
+      },
+      {
+        "id": "p_53_3",
+        "title": "Maximal Square",
+        "slug": "maximal-square",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/maximal-square/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_54",
+    "title": "Bit Manipulation & Greedy",
+    "category": "Greedy & Bit Manipulation",
+    "note": "Syllabus complete. All 162 videos done. Next 6 days: turning knowledge into offers.",
+    "gfgUrl": "https://www.geeksforgeeks.org/dsa/bitwise-algorithms/",
+    "videos": [
+      {
+        "id": "v_54_1",
+        "title": "Master Bit Manipulation in One Video",
+        "ytId": "T56nhL8Y1po",
+        "url": "https://www.youtube.com/watch?v=T56nhL8Y1po"
+      },
+      {
+        "id": "v_54_2",
+        "title": "Greedy Algorithms: Zero to Interview-Ready",
+        "ytId": "OaHw9ZZHknw",
+        "url": "https://www.youtube.com/watch?v=OaHw9ZZHknw"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_54_1",
+        "title": "Single Number",
+        "slug": "single-number",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/single-number/"
+      },
+      {
+        "id": "p_54_2",
+        "title": "Counting Bits",
+        "slug": "counting-bits",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/counting-bits/"
+      },
+      {
+        "id": "p_54_3",
+        "title": "Jump Game",
+        "slug": "jump-game",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/jump-game/"
+      },
+      {
+        "id": "p_54_4",
+        "title": "Gas Station",
+        "slug": "gas-station",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/gas-station/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_55",
+    "title": "Mock 1 — Arrays, Strings & Hashing",
+    "category": "Placement Mocks",
+    "note": "Timed mock: 90 minutes, 4 problems, no hints. Score yourself honestly and note weak spots.",
+    "gfgUrl": "",
+    "videos": [
+      {
+        "id": "v_55_1",
+        "title": "My 4 Year DSA Journey & Mistakes",
+        "ytId": "7ztFXqo8nZo",
+        "url": "https://www.youtube.com/watch?v=7ztFXqo8nZo"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_55_1",
+        "title": "Longest Consecutive Sequence",
+        "slug": "longest-consecutive-sequence",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/longest-consecutive-sequence/"
+      },
+      {
+        "id": "p_55_2",
+        "title": "Spiral Matrix",
+        "slug": "spiral-matrix",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/spiral-matrix/"
+      },
+      {
+        "id": "p_55_3",
+        "title": "Set Matrix Zeroes",
+        "slug": "set-matrix-zeroes",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/set-matrix-zeroes/"
+      },
+      {
+        "id": "p_55_4",
+        "title": "Rotate Image",
+        "slug": "rotate-image",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/rotate-image/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_56",
+    "title": "Mock 2 — Linked List, Stack & Design",
+    "category": "Placement Mocks",
+    "note": "LRU Cache is a design + DSA hybrid. Product companies love it. Build it from scratch twice.",
+    "gfgUrl": "",
+    "videos": [
+      {
+        "id": "v_56_1",
+        "title": "The DSA Revolution Has Started",
+        "ytId": "EcQN1jziwDo",
+        "url": "https://www.youtube.com/watch?v=EcQN1jziwDo"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_56_1",
+        "title": "LRU Cache",
+        "slug": "lru-cache",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/lru-cache/"
+      },
+      {
+        "id": "p_56_2",
+        "title": "Add Two Numbers",
+        "slug": "add-two-numbers",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/add-two-numbers/"
+      },
+      {
+        "id": "p_56_3",
+        "title": "Sort List",
+        "slug": "sort-list",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/sort-list/"
+      },
+      {
+        "id": "p_56_4",
+        "title": "Implement Queue using Stacks",
+        "slug": "implement-queue-using-stacks",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/implement-queue-using-stacks/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_57",
+    "title": "Mock 3 — Trees & Graphs",
+    "category": "Placement Mocks",
+    "note": "Explain each solution OUT LOUD as you code. Interviews are spoken, not silent.",
+    "gfgUrl": "",
+    "videos": [
+      {
+        "id": "v_57_1",
+        "title": "Next Phase Plan For DSA Patterns",
+        "ytId": "GNz8F8MCOsU",
+        "url": "https://www.youtube.com/watch?v=GNz8F8MCOsU"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_57_1",
+        "title": "Binary Tree Right Side View",
+        "slug": "binary-tree-right-side-view",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/binary-tree-right-side-view/"
+      },
+      {
+        "id": "p_57_2",
+        "title": "Clone Graph",
+        "slug": "clone-graph",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/clone-graph/"
+      },
+      {
+        "id": "p_57_3",
+        "title": "Binary Tree Maximum Path Sum",
+        "slug": "binary-tree-maximum-path-sum",
+        "diff": "H",
+        "url": "https://leetcode.com/problems/binary-tree-maximum-path-sum/"
+      },
+      {
+        "id": "p_57_4",
+        "title": "Word Search II",
+        "slug": "word-search-ii",
+        "diff": "H",
+        "url": "https://leetcode.com/problems/word-search-ii/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_58",
+    "title": "Mock 4 — DP, Greedy & Bit Manipulation",
+    "category": "Placement Mocks",
+    "note": "Revisit every problem you failed in Mocks 1-3 before starting this one.",
+    "gfgUrl": "",
+    "videos": [
+      {
+        "id": "v_58_1",
+        "title": "DSA Patterns Course Announcement",
+        "ytId": "dQ4amKJuE7I",
+        "url": "https://www.youtube.com/watch?v=dQ4amKJuE7I"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_58_1",
+        "title": "Jump Game II",
+        "slug": "jump-game-ii",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/jump-game-ii/"
+      },
+      {
+        "id": "p_58_2",
+        "title": "Decode Ways",
+        "slug": "decode-ways",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/decode-ways/"
+      },
+      {
+        "id": "p_58_3",
+        "title": "Partition Labels",
+        "slug": "partition-labels",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/partition-labels/"
+      },
+      {
+        "id": "p_58_4",
+        "title": "Single Number II",
+        "slug": "single-number-ii",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/single-number-ii/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_59",
+    "title": "Placement Sprint — Core Patterns Capstone",
+    "category": "Placement Mocks",
+    "note": "Ship your RAG project to GitHub with a real README today. One AI project on a fresher resume stands out enormously.",
+    "gfgUrl": "",
+    "videos": [
+      {
+        "id": "v_59_1",
+        "title": "Case Study: 60hr Playlist to RAG",
+        "ytId": "Z9CI_OVhXNs",
+        "url": "https://www.youtube.com/watch?v=Z9CI_OVhXNs"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_59_1",
+        "title": "Merge Intervals",
+        "slug": "merge-intervals",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/merge-intervals/"
+      },
+      {
+        "id": "p_59_2",
+        "title": "Number of Islands",
+        "slug": "number-of-islands",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/number-of-islands/"
+      },
+      {
+        "id": "p_59_3",
+        "title": "Coin Change",
+        "slug": "coin-change",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/coin-change/"
+      }
+    ]
+  },
+  {
+    "topicId": "topic_60",
+    "title": "Placement Master Mock & Final Review",
+    "category": "Placement Mocks",
+    "note": "Day 1 problems, now in minutes instead of hours. That gap is your proof. Start applying today.",
+    "gfgUrl": "",
+    "videos": [
+      {
+        "id": "v_60_1",
+        "title": "How I Automated My Entire Job Search",
+        "ytId": "hSDo59FppOU",
+        "url": "https://www.youtube.com/watch?v=hSDo59FppOU"
+      }
+    ],
+    "problems": [
+      {
+        "id": "p_60_1",
+        "title": "Two Sum",
+        "slug": "two-sum",
+        "diff": "E",
+        "url": "https://leetcode.com/problems/two-sum/"
+      },
+      {
+        "id": "p_60_2",
+        "title": "Longest Substring Without Repeating Characters",
+        "slug": "longest-substring-without-repeating-characters",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/"
+      },
+      {
+        "id": "p_60_3",
+        "title": "Course Schedule",
+        "slug": "course-schedule",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/course-schedule/"
+      },
+      {
+        "id": "p_60_4",
+        "title": "Maximum Subarray",
+        "slug": "maximum-subarray",
+        "diff": "M",
+        "url": "https://leetcode.com/problems/maximum-subarray/"
+      }
+    ]
+  }
+];
+
+    const STORAGE_KEY = "dsa_mastery_tracker_progress_v2";
+    let userState = {
+      completedVideos: {},
+      completedProblems: {},
+      lastUpdated: new Date().toISOString()
+    };
+
+    // Load state from localStorage
+    function loadState() {
+      try {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved) {
+          const parsed = JSON.parse(saved);
+          userState = {
+            completedVideos: parsed.completedVideos || {},
+            completedProblems: parsed.completedProblems || {},
+            lastUpdated: parsed.lastUpdated || new Date().toISOString()
+          };
+        }
+      } catch (err) {
+        console.error("Failed to load progress from localStorage:", err);
+      }
+    }
+
+    // Save state to localStorage
+    function saveState() {
+      userState.lastUpdated = new Date().toISOString();
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(userState));
+      } catch (err) {
+        console.error("Failed to save progress to localStorage:", err);
+      }
+      updateAllMetrics();
+    }
+
+    // Toast Notification helper
+    function showToast(message, duration = 3000) {
+      const container = document.getElementById("toastContainer");
+      const toast = document.createElement("div");
+      toast.className = "toast";
+      toast.innerHTML = `
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <span>${message}</span>
+      `;
+      container.appendChild(toast);
+      
+      requestAnimationFrame(() => {
+        toast.classList.add("show");
+      });
+
+      setTimeout(() => {
+        toast.classList.remove("show");
+        setTimeout(() => toast.remove(), 300);
+      }, duration);
+    }
+
+    // Render Main Dashboard
+    let currentCategory = "all";
+    let hideCompleted = false;
+    let searchQuery = "";
+    let allExpanded = false;
+
+    function renderDashboard() {
+      const container = document.getElementById("modulesContainer");
+      container.innerHTML = "";
+
+      let filteredTopics = CURRICULUM.filter(topic => {
+        // Category filter
+        if (currentCategory !== "all" && topic.category !== currentCategory) {
+          return false;
+        }
+
+        // Search filter
+        if (searchQuery.trim() !== "") {
+          const q = searchQuery.toLowerCase();
+          const matchTitle = topic.title.toLowerCase().includes(q);
+          const matchCategory = topic.category.toLowerCase().includes(q);
+          const matchVideos = topic.videos.some(v => v.title.toLowerCase().includes(q));
+          const matchProblems = topic.problems.some(p => p.title.toLowerCase().includes(q) || p.slug.toLowerCase().includes(q));
+          if (!matchTitle && !matchCategory && !matchVideos && !matchProblems) {
+            return false;
+          }
+        }
+
+        // Hide completed filter
+        if (hideCompleted) {
+          const isTopicDone = isTopicFullyCompleted(topic);
+          if (isTopicDone) return false;
+        }
+
+        return true;
+      });
+
+      if (filteredTopics.length === 0) {
+        container.innerHTML = `
+          <div class="empty-state">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <h3 style="font-size:15px;font-weight:600;color:var(--text-primary);margin-bottom:4px">No Topics Match Your Filter</h3>
+            <p style="font-size:12.5px">Try clearing your search query or selecting 'All Modules'.</p>
+          </div>
+        `;
+        return;
+      }
+
+      // Group filtered topics by Category
+      const grouped = {};
+      filteredTopics.forEach(t => {
+        if (!grouped[t.category]) grouped[t.category] = [];
+        grouped[t.category].push(t);
+      });
+
+      let topicIndexOverall = 1;
+
+      for (const [categoryName, topics] of Object.entries(grouped)) {
+        const groupEl = document.createElement("div");
+        groupEl.className = "module-group";
+
+        let totalGroupItems = 0;
+        let doneGroupItems = 0;
+
+        topics.forEach(t => {
+          t.videos.forEach(v => {
+            totalGroupItems++;
+            if (userState.completedVideos[v.id]) doneGroupItems++;
+          });
+          t.problems.forEach(p => {
+            totalGroupItems++;
+            if (userState.completedProblems[p.id]) doneGroupItems++;
+          });
+        });
+
+        const moduleHeader = document.createElement("div");
+        moduleHeader.className = "module-header";
+        moduleHeader.innerHTML = `
+          <span class="module-badge">${categoryName}</span>
+          <h2 class="module-title">${categoryName} Curriculum</h2>
+          <span class="module-stats">${doneGroupItems}/${totalGroupItems} Completed</span>
+        `;
+        groupEl.appendChild(moduleHeader);
+
+        topics.forEach(topic => {
+          const isCompleted = isTopicFullyCompleted(topic);
+          const topicCard = document.createElement("details");
+          topicCard.className = `topic-accordion ${isCompleted ? 'completed' : ''}`;
+          topicCard.id = `card_${topic.topicId}`;
+          if (allExpanded) topicCard.open = true;
+
+          const totalTopicItems = topic.videos.length + topic.problems.length;
+          let doneTopicItems = 0;
+          topic.videos.forEach(v => { if (userState.completedVideos[v.id]) doneTopicItems++; });
+          topic.problems.forEach(p => { if (userState.completedProblems[p.id]) doneTopicItems++; });
+
+          const topicPct = totalTopicItems > 0 ? Math.round((doneTopicItems / totalTopicItems) * 100) : 0;
+
+          // Topic summary
+          const summary = document.createElement("summary");
+          summary.className = "topic-summary";
+          summary.innerHTML = `
+            <div class="topic-num">${String(topicIndexOverall++).padStart(2, '0')}</div>
+            <div class="topic-info">
+              <div class="topic-title-row">
+                <span class="topic-name">${topic.title}</span>
+              </div>
+              <div class="topic-meta-line">
+                <span>${topic.videos.length} videos · ${topic.problems.length} problems</span>
+                <span class="topic-mini-bar"><i class="topic-mini-bar-fill" style="width:${topicPct}%"></i></span>
+                <span>${doneTopicItems}/${totalTopicItems} (${topicPct}%)</span>
+              </div>
+            </div>
+            <div class="chevron-icon">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </div>
+          `;
+
+          // Body
+          const body = document.createElement("div");
+          body.className = "topic-body";
+
+          // Concept Videos Sub-list
+          if (topic.videos && topic.videos.length > 0) {
+            const vidsTitle = document.createElement("div");
+            vidsTitle.className = "sub-section-title";
+            vidsTitle.innerHTML = `
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+              <span>Concept Videos (${topic.videos.length})</span>
+            `;
+            body.appendChild(vidsTitle);
+
+            const vidsUl = document.createElement("ul");
+            vidsUl.className = "item-list";
+
+            topic.videos.forEach(v => {
+              const isChecked = !!userState.completedVideos[v.id];
+              const li = document.createElement("li");
+              li.className = `item-row ${isChecked ? 'is-done' : ''}`;
+              li.id = `row_${v.id}`;
+
+              li.innerHTML = `
+                <input type="checkbox" class="item-checkbox" id="chk_${v.id}" ${isChecked ? 'checked' : ''} data-vid="${v.id}">
+                <a href="${v.url}" target="_blank" rel="noopener noreferrer" class="item-link" title="Watch on YouTube">
+                  <span>${v.title}</span>
+                </a>
+                <a href="${v.url}" target="_blank" rel="noopener noreferrer" class="action-icon-link yt" title="Open in YouTube">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                </a>
+              `;
+
+              const chk = li.querySelector(".item-checkbox");
+              chk.addEventListener("change", (e) => {
+                if (e.target.checked) {
+                  userState.completedVideos[v.id] = true;
+                  li.classList.add("is-done");
+                } else {
+                  delete userState.completedVideos[v.id];
+                  li.classList.remove("is-done");
+                }
+                saveState();
+                updateTopicCardUI(topic);
+              });
+
+              vidsUl.appendChild(li);
+            });
+
+            body.appendChild(vidsUl);
+          }
+
+          // Practice Questions Sub-list
+          if (topic.problems && topic.problems.length > 0) {
+            const probsTitle = document.createElement("div");
+            probsTitle.className = "sub-section-title";
+            probsTitle.innerHTML = `
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6"></path><path d="M8 6l-6 6 6 6"></path></svg>
+              <span>Practice Questions (${topic.problems.length})</span>
+            `;
+            body.appendChild(probsTitle);
+
+            const probsUl = document.createElement("ul");
+            probsUl.className = "item-list";
+
+            topic.problems.forEach(p => {
+              const isChecked = !!userState.completedProblems[p.id];
+              const li = document.createElement("li");
+              li.className = `item-row ${isChecked ? 'is-done' : ''}`;
+              li.id = `row_${p.id}`;
+
+              const diffLabel = p.diff === 'E' ? 'Easy' : p.diff === 'M' ? 'Med' : 'Hard';
+
+              li.innerHTML = `
+                <input type="checkbox" class="item-checkbox" id="chk_${p.id}" ${isChecked ? 'checked' : ''} data-pid="${p.id}">
+                <a href="${p.url}" target="_blank" rel="noopener noreferrer" class="item-link" title="Solve on LeetCode">
+                  <span>${p.title}</span>
+                </a>
+                <span class="diff-badge ${p.diff}">${diffLabel}</span>
+                <a href="${p.url}" target="_blank" rel="noopener noreferrer" class="action-icon-link lc" title="Open in LeetCode">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+              `;
+
+              const chk = li.querySelector(".item-checkbox");
+              chk.addEventListener("change", (e) => {
+                if (e.target.checked) {
+                  userState.completedProblems[p.id] = true;
+                  li.classList.add("is-done");
+                } else {
+                  delete userState.completedProblems[p.id];
+                  li.classList.remove("is-done");
+                }
+                saveState();
+                updateTopicCardUI(topic);
+              });
+
+              probsUl.appendChild(li);
+            });
+
+            body.appendChild(probsUl);
+          }
+
+          // Topic Key Takeaway / Pattern Note
+          if (topic.note) {
+            const noteBox = document.createElement("div");
+            noteBox.className = "topic-note-box";
+            noteBox.innerHTML = `
+              <div class="topic-note-header">Key Pattern Takeaway</div>
+              <div>${topic.note}</div>
+            `;
+            body.appendChild(noteBox);
+          }
+
+          // GFG Theory Link
+          if (topic.gfgUrl) {
+            const theoryBox = document.createElement("div");
+            theoryBox.className = "theory-link-box";
+            theoryBox.innerHTML = `
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+              <span>Reference:</span>
+              <a href="${topic.gfgUrl}" target="_blank" rel="noopener noreferrer">
+                GeeksforGeeks Concept Guide
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            `;
+            body.appendChild(theoryBox);
+          }
+
+          topicCard.appendChild(summary);
+          topicCard.appendChild(body);
+          groupEl.appendChild(topicCard);
+        });
+
+        container.appendChild(groupEl);
+      }
+    }
+
+    function isTopicFullyCompleted(topic) {
+      const allVideosDone = topic.videos.every(v => userState.completedVideos[v.id]);
+      const allProbsDone = topic.problems.every(p => userState.completedProblems[p.id]);
+      return allVideosDone && allProbsDone && (topic.videos.length + topic.problems.length > 0);
+    }
+
+    function updateTopicCardUI(topic) {
+      const card = document.getElementById(`card_${topic.topicId}`);
+      if (!card) return;
+
+      const totalItems = topic.videos.length + topic.problems.length;
+      let doneItems = 0;
+      topic.videos.forEach(v => { if (userState.completedVideos[v.id]) doneItems++; });
+      topic.problems.forEach(p => { if (userState.completedProblems[p.id]) doneItems++; });
+
+      const pct = totalItems > 0 ? Math.round((doneItems / totalItems) * 100) : 0;
+      const isCompleted = (doneItems === totalItems && totalItems > 0);
+
+      if (isCompleted) {
+        card.classList.add("completed");
+      } else {
+        card.classList.remove("completed");
+      }
+
+      const miniBar = card.querySelector(".topic-mini-bar-fill");
+      if (miniBar) miniBar.style.width = `${pct}%`;
+
+      const metaLineSpan = card.querySelectorAll(".topic-meta-line span");
+      if (metaLineSpan && metaLineSpan[2]) {
+        metaLineSpan[2].textContent = `${doneItems}/${totalItems} (${pct}%)`;
+      }
+    }
+
+    // Update Header Metric Cards and Overall Progress Bar
+    function updateAllMetrics() {
+      let totalVideos = 0;
+      let watchedVideos = 0;
+
+      let totalProblems = 0;
+      let solvedProblems = 0;
+
+      let easySolved = 0;
+      let medSolved = 0;
+      let hardSolved = 0;
+
+      CURRICULUM.forEach(topic => {
+        topic.videos.forEach(v => {
+          totalVideos++;
+          if (userState.completedVideos[v.id]) watchedVideos++;
+        });
+
+        topic.problems.forEach(p => {
+          totalProblems++;
+          if (userState.completedProblems[p.id]) {
+            solvedProblems++;
+            if (p.diff === 'E') easySolved++;
+            else if (p.diff === 'M') medSolved++;
+            else if (p.diff === 'H') hardSolved++;
+          }
+        });
+      });
+
+      const totalAll = totalVideos + totalProblems;
+      const completedAll = watchedVideos + solvedProblems;
+      const overallPercent = totalAll > 0 ? Math.round((completedAll / totalAll) * 100) : 0;
+      const videosPercent = totalVideos > 0 ? Math.round((watchedVideos / totalVideos) * 100) : 0;
+
+      // Update Top Progress Bar & Mini Pill
+      const bar = document.getElementById("overallProgressBar");
+      const pctText = document.getElementById("overallPercentText");
+      if (bar) bar.style.width = `${overallPercent}%`;
+      if (pctText) pctText.textContent = `${overallPercent}%`;
+
+      const pillFill = document.getElementById("pillFill");
+      const pillText = document.getElementById("pillText");
+      if (pillFill) pillFill.style.width = `${overallPercent}%`;
+      if (pillText) pillText.textContent = `${overallPercent}% · ${completedAll}/${totalAll}`;
+
+      // Update Metric Cards
+      const metricV = document.getElementById("metricVideos");
+      const metricVSub = document.getElementById("metricVideosSub");
+      if (metricV) metricV.innerHTML = `${watchedVideos}<span style="font-size:11px;color:var(--text-muted)">/${totalVideos}</span>`;
+      if (metricVSub) metricVSub.textContent = `${videosPercent}% complete`;
+
+      const metricP = document.getElementById("metricProblems");
+      const metricPSub = document.getElementById("metricProblemsSub");
+      if (metricP) metricP.innerHTML = `${solvedProblems}<span style="font-size:11px;color:var(--text-muted)">/${totalProblems}</span>`;
+      if (metricPSub) metricPSub.textContent = `${easySolved} E · ${medSolved} M · ${hardSolved} H`;
+
+      const metricT = document.getElementById("metricTotal");
+      const metricTSub = document.getElementById("metricTotalSub");
+      if (metricT) metricT.innerHTML = `${completedAll}<span style="font-size:11px;color:var(--text-muted)">/${totalAll}</span>`;
+      if (metricTSub) metricTSub.textContent = `${overallPercent}% Overall Mastery`;
+    }
+
+    // Export & Import Handlers
+    function handleExportJSON() {
+      const exportData = {
+        app: "DSA Mastery Tracker",
+        version: "2.0",
+        exportedAt: new Date().toISOString(),
+        completedVideosCount: Object.keys(userState.completedVideos).length,
+        completedProblemsCount: Object.keys(userState.completedProblems).length,
+        state: userState
+      };
+
+      const jsonString = JSON.stringify(exportData, null, 2);
+      const textarea = document.getElementById("syncCodeArea");
+      textarea.value = jsonString;
+
+      navigator.clipboard.writeText(jsonString).then(() => {
+        showToast("Backup JSON copied to clipboard & displayed below!");
+      }).catch(() => {
+        showToast("Backup JSON generated in the text area below!");
+      });
+    }
+
+    function handleImportJSON() {
+      const textarea = document.getElementById("syncCodeArea");
+      const raw = textarea.value.trim();
+      if (!raw) {
+        showToast("Please paste your JSON backup into the text area first.");
+        return;
+      }
+
+      try {
+        const parsed = JSON.parse(raw);
+        let incomingState = null;
+        if (parsed.state && (parsed.state.completedVideos || parsed.state.completedProblems)) {
+          incomingState = parsed.state;
+        } else if (parsed.completedVideos || parsed.completedProblems) {
+          incomingState = parsed;
+        }
+
+        if (incomingState) {
+          userState.completedVideos = incomingState.completedVideos || {};
+          userState.completedProblems = incomingState.completedProblems || {};
+          saveState();
+          renderDashboard();
+          showToast("Progress successfully restored from backup!");
+        } else {
+          showToast("Invalid backup format. Please check your JSON.");
+        }
+      } catch (err) {
+        showToast("Error parsing JSON: " + err.message);
+      }
+    }
+
+    function setupHeaderToggleAndScroll() {
+      const header = document.getElementById("mainHeader");
+      const headerToggleBtn = document.getElementById("headerToggleBtn");
+      const headerToggleLabel = document.getElementById("headerToggleLabel");
+
+      let isManuallyLocked = false;
+      let manualMinimizationState = false;
+
+      function setHeaderMinimized(minimized) {
+        if (minimized) {
+          header.classList.add("minimized");
+          headerToggleLabel.textContent = "Expand";
+        } else {
+          header.classList.remove("minimized");
+          headerToggleLabel.textContent = "Minimize";
+        }
+      }
+
+      // Toggle button click
+      headerToggleBtn.addEventListener("click", () => {
+        isManuallyLocked = true;
+        const currentIsMin = header.classList.contains("minimized");
+        manualMinimizationState = !currentIsMin;
+        setHeaderMinimized(manualMinimizationState);
+        localStorage.setItem("dsa_header_min", manualMinimizationState ? "1" : "0");
+      });
+
+      // Restore saved header minimization state
+      const savedMin = localStorage.getItem("dsa_header_min");
+      if (savedMin === "1") {
+        isManuallyLocked = true;
+        manualMinimizationState = true;
+        setHeaderMinimized(true);
+      }
+
+      // Auto-shrink on scroll if not manually locked to expanded
+      let lastScrollY = window.scrollY;
+      window.addEventListener("scroll", () => {
+        const currentY = window.scrollY;
+        if (!isManuallyLocked) {
+          if (currentY > 60) {
+            setHeaderMinimized(true);
+          } else {
+            setHeaderMinimized(false);
+          }
+        }
+        lastScrollY = currentY;
+      }, { passive: true });
+    }
+
+    function setupEventListeners() {
+      // Category filter chips
+      const chips = document.querySelectorAll("#categoryChips .chip[data-cat]");
+      chips.forEach(chip => {
+        chip.addEventListener("click", () => {
+          chips.forEach(c => c.classList.remove("active"));
+          chip.classList.add("active");
+          currentCategory = chip.getAttribute("data-cat");
+          renderDashboard();
+        });
+      });
+
+      // Hide completed toggle
+      const hideDoneBtn = document.getElementById("hideDoneChip");
+      hideDoneBtn.addEventListener("click", () => {
+        hideCompleted = !hideCompleted;
+        hideDoneBtn.classList.toggle("active", hideCompleted);
+        hideDoneBtn.setAttribute("aria-pressed", hideCompleted ? "true" : "false");
+        renderDashboard();
+      });
+
+      // Search input
+      const searchInput = document.getElementById("searchInput");
+      searchInput.addEventListener("input", (e) => {
+        searchQuery = e.target.value;
+        renderDashboard();
+      });
+
+      // Expand / Collapse All
+      const toggleAllBtn = document.getElementById("btnToggleAll");
+      toggleAllBtn.addEventListener("click", () => {
+        allExpanded = !allExpanded;
+        toggleAllBtn.textContent = allExpanded ? "Collapse All" : "Expand All";
+        const allCards = document.querySelectorAll(".topic-accordion");
+        allCards.forEach(c => { c.open = allExpanded; });
+      });
+
+      // Theme toggle
+      const themeToggle = document.getElementById("themeToggle");
+      const themeLabel = document.getElementById("themeLabel");
+      themeToggle.addEventListener("click", () => {
+        const currentTheme = document.documentElement.getAttribute("data-theme");
+        const nextTheme = currentTheme === "dark" ? "light" : "dark";
+        document.documentElement.setAttribute("data-theme", nextTheme);
+        themeLabel.textContent = nextTheme === "dark" ? "Light" : "Dark";
+        localStorage.setItem("dsa_theme", nextTheme);
+      });
+
+      // Restore saved theme
+      const savedTheme = localStorage.getItem("dsa_theme");
+      if (savedTheme) {
+        document.documentElement.setAttribute("data-theme", savedTheme);
+        themeLabel.textContent = savedTheme === "dark" ? "Light" : "Dark";
+      }
+
+      // Sync buttons
+      document.getElementById("btnExportJson").addEventListener("click", handleExportJSON);
+      document.getElementById("btnImportJson").addEventListener("click", handleImportJSON);
+
+      // Reset confirmation modal
+      const resetModal = document.getElementById("resetModal");
+      const btnResetAll = document.getElementById("btnResetAll");
+      const cancelResetBtn = document.getElementById("cancelResetBtn");
+      const confirmResetBtn = document.getElementById("confirmResetBtn");
+
+      btnResetAll.addEventListener("click", () => {
+        resetModal.classList.add("active");
+      });
+
+      cancelResetBtn.addEventListener("click", () => {
+        resetModal.classList.remove("active");
+      });
+
+      resetModal.addEventListener("click", (e) => {
+        if (e.target === resetModal) resetModal.classList.remove("active");
+      });
+
+      confirmResetBtn.addEventListener("click", () => {
+        userState = {
+          completedVideos: {},
+          completedProblems: {},
+          lastUpdated: new Date().toISOString()
+        };
+        saveState();
+        renderDashboard();
+        resetModal.classList.remove("active");
+        document.getElementById("syncCodeArea").value = "";
+        showToast("All progress has been reset.");
+      });
+
+      setupHeaderToggleAndScroll();
+    }
+
+    // Initialize application
+    window.addEventListener("DOMContentLoaded", () => {
+      loadState();
+      renderDashboard();
+      updateAllMetrics();
+      setupEventListeners();
+    });
+  </script>
+</body>
+</html>
